@@ -83,21 +83,21 @@ PHP
   wp import wptest.xml --authors=create
   rm wptest.xml
 
-	## OBJECT CACHE ##
-	
-	# Install and provision VVV Redis <https://github.com/goblindegook/VVV-Redis> to
-	# manage and inspect cache.
+  ## OBJECT CACHE ##
+  
+  # Install and provision VVV Redis <https://github.com/goblindegook/VVV-Redis> to
+  # manage and inspect cache.
 
-	echo " * Setting up object cache"
+  echo " * Setting up object cache"
 
-	sudo apt-get -y install redis-server php5-redis
-	sudo service php5-fpm restart
+  sudo apt-get -y install redis-server php5-redis
+  sudo service php5-fpm restart
 
-	wp plugin install wp-redis
-	wp plugin update wp-redis
-	cp wp-content/plugins/wp-redis/object-cache.php wp-content/object-cache.php
+  wp plugin install wp-redis
+  wp plugin update wp-redis
+  cp wp-content/plugins/wp-redis/object-cache.php wp-content/object-cache.php
 
-	touch wp-content/advanced-cache.php
+  touch wp-content/advanced-cache.php
 fi
 
 ## UPDATING COMPONENTS ##
