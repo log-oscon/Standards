@@ -1,14 +1,17 @@
 # logs
-/logs
-/wc-logs
+/logs/
+/wc-logs/
 *.log
 
 # documentation
 /docs/
 
 # Composer packages
-vendor/composer/installers
-vendor/apigen/apigen
+vendor/composer/installers/
+vendor/apigen/apigen/
+
+# NPM packages
+node_modules/
 
 # development plugins
 /wp-content/plugins/debug-bar
