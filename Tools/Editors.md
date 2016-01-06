@@ -17,7 +17,7 @@ If Sublime Text is your editor of choice, then we recommend the following extens
 * [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
 * [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter)
 * [SublimeLinter-contrib-scss-lint](https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint)
-* [SublimeLinter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint)
+* [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)
 * [SublimeLinter-phpcs](https://packagecontrol.io/packages/SublimeLinter-phpcs)
 
 ### [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/)
