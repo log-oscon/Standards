@@ -1,6 +1,6 @@
 # Coding Style
 
-We mainly use SASS (mainly written as SCSS) as a pre-processor to generate the final CSS styles for each project. As a result, our CSS coding style mixes with the SASS and on the following document we try to give this distinction by pointing to what only applies to SASS (in general because it is invalid CSS).
+We mainly use Sass (mainly written as SCSS) as a pre-processor to generate the final CSS styles for each project. As a result, our CSS coding style mixes with the Sass and on the following document we try to give this distinction by pointing to what only applies to Sass (in general because it is invalid CSS).
 
 ## General principles
 
@@ -72,20 +72,20 @@ Good:
 
 ### Format
 * Indentation should be in spaces, two for each level (Editor Config's dotfile should be used, if possible)
-* SASS: nested declarations must have an empty line before the selector list if:
+* Sass: nested declarations must have an empty line before the selector list if:
     * The parent as @extend, @include or regular declarations
     * There are other nested declarations before
 
 #### Declaration ordering
 Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
 
-SASS:
+Sass:
 1. @extend
 2. @include
 3. Regular declarations (allows for overriding)
 4. Nested declarations
 
-#### SASS: Nesting
+#### Sass: Nesting
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
 
 **Nesting required:** when it always makes the code easier to read:
