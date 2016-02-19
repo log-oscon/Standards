@@ -15,6 +15,154 @@ If you follow nothing else at least don't forget these next few lines.
 
 ## CSS
 
+### Naming Conventions
+
+* Use lowercase and separate words with hyphens, don't use camelCase or snake_case. An exception to this is to override some out
+
+### Location-based Styling
+
+Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
+(Outside the WordPress environment the advice is the same!)
+
+### Format
+
+* Include one space before the opening braces
+
+Bad:
+```css
+.selector-1,
+.selector-2{
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */
+}
+```
+
+* Opening braces on the same line as the last selector in the list
+
+Bad:
+```css
+.selector-1,
+.selector-2
+{
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */
+}
+```
+
+* Closing braces on a different line
+
+Bad:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */ }
+```
+
+Good:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */
+}
+```
+
+* Place the closing brace of a ruleset in the same column as the first character of the ruleset
+
+Bad:
+```css
+.selector {
+  /* Declarations */
+  }
+```
+
+Good:
+```css
+.selector {
+  /* Declarations */
+}
+```
+
+* Separate each rule set with a single blank line
+
+Bad:
+```css
+.selector-1 {
+  /* Declarations */
+}
+.selector-2 {
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1 {
+  /* Declarations */
+}
+
+.selector-2 {
+  /* Declarations */
+}
+```
+
+* Include one space on comma-separated values, after each comma
+
+Bad:
+```css
+.selector-1 {
+  background-image: url("images/my-lovely-face.png"),url("images/my-pink-background.png");
+}
+
+.selector-2 {
+  background-image: linear-gradient(to top,yellow,pink);
+  color: rgb(32,32,33);
+}
+```
+
+Good:
+```css
+.selector-1 {
+  background-image: url("images/my-lovely-face.png"), url("images/my-pink-background.png");
+}
+
+.selector-2 {
+  background-image: linear-gradient(to top, yellow, pink);
+  color: rgb(31, 32, 33);
+}
+```
+
+* Use double quotes instead of single quotes
+
+Bad:
+```css
+.selector {
+  background-image: url('images/half-quote.jpg');
+  content: '';
+}
+```
+
+Good:
+```css
+.selector {
+  background-image: url("images/half-quote.jpg");
+  content: "";
+}
+```
+
 ### Selectors
 
 * Write one selector per line
@@ -66,10 +214,6 @@ Good:
   /* Declarations */
 }
 ```
-
-#### Naming Conventions
-
-* Use lowercase and separate words with hyphens, don't use camelCase or snake_case. An exception to this is to override some out
 
 ### Declarations
 
@@ -303,145 +447,6 @@ Example:
 ### Vendor Prefixes
 Don't add any declarations with them, use something like [PostCSS' Autoprefixer](https://github.com/postcss/autoprefixer). This way you only have to worry about the support of a given property.
 
-### Format
-
-* Include one space before the opening braces
-
-Bad:
-```css
-.selector-1,
-.selector-2{
-  /* Declarations */
-}
-```
-
-Good:
-```css
-.selector-1,
-.selector-2 {
-  /* Declarations */
-}
-```
-
-* Opening braces on the same line as the last selector in the list
-
-Bad:
-```css
-.selector-1,
-.selector-2
-{
-  /* Declarations */
-}
-```
-
-Good:
-```css
-.selector-1,
-.selector-2 {
-  /* Declarations */
-}
-```
-
-* Closing braces on a different line
-
-Bad:
-```css
-.selector-1,
-.selector-2 {
-  /* Declarations */ }
-```
-
-Good:
-```css
-.selector-1,
-.selector-2 {
-  /* Declarations */
-}
-```
-
-* Place the closing brace of a ruleset in the same column as the first character of the ruleset
-
-Bad:
-```css
-.selector {
-  /* Declarations */
-  }
-```
-
-Good:
-```css
-.selector {
-  /* Declarations */
-}
-```
-
-* Separate each rule set with a single blank line
-
-Bad:
-```css
-.selector-1 {
-  /* Declarations */
-}
-.selector-2 {
-  /* Declarations */
-}
-```
-
-Good:
-```css
-.selector-1 {
-  /* Declarations */
-}
-
-.selector-2 {
-  /* Declarations */
-}
-```
-
-* Include one space on comma-separated values, after each comma
-
-Bad:
-```css
-.selector-1 {
-  background-image: url("images/my-lovely-face.png"),url("images/my-pink-background.png");
-}
-
-.selector-2 {
-  background-image: linear-gradient(to top,yellow,pink);
-  color: rgb(32,32,33);
-}
-```
-
-Good:
-```css
-.selector-1 {
-  background-image: url("images/my-lovely-face.png"), url("images/my-pink-background.png");
-}
-
-.selector-2 {
-  background-image: linear-gradient(to top, yellow, pink);
-  color: rgb(31, 32, 33);
-}
-```
-
-* Use double quotes instead of single quotes
-
-Bad:
-```css
-.selector {
-  background-image: url('images/half-quote.jpg');
-  content: '';
-}
-```
-
-Good:
-```css
-.selector {
-  background-image: url("images/half-quote.jpg");
-  content: "";
-}
-```
-
 ### Media Queries
 All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
 
@@ -472,11 +477,6 @@ Example:
 ```
 
 Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
-
-### Location-based Styling
-
-Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
-(Outside the WordPress environment the advice is the same!)
 
 ## Sass
 
