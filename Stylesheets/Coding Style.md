@@ -10,53 +10,12 @@ If you follow nothing else at least don't forget these next few lines.
 
 * **All code should look like a single person wrote it, even when many actually did.** This ensures that anyone coming in to the project later on for whatever reason (correct a bug, extend functionality, help with development, etc.) will be able to understand and contribute in a single voice.
 * Code readability should come first and optimization second.
-* When in doubt about a style raise the question for debate and proceed with existing common patterns (share these patterns when with your question).
-* Enforce the agreed-upon style, always. Code review is a particular example where this is almost mandatory.
+* When in doubt about a style raise the question for debate and proceed with existing common patterns (share these patterns with your question).
+* Enforce the agreed-upon style, always. Code review is a particular example where this should always be done.
 
-## Syntax and Formatting
+## CSS
 
-This probably the main reason why code feels like it was written by different people. By keeping the syntax and formatting the code in a clean way maintaining and debugging the code become easier tasks.
-
-### CSS
-
-* Use double quotes instead of single quotes
-
-Bad:
-```css
-.selector {
-  background-image: url('images/half-quote.jpg');
-  content: '';
-}
-```
-
-Good:
-```css
-.selector {
-  background-image: url("images/half-quote.jpg");
-  content: "";
-}
-```
-
-* Write lowercase values, except for font names
-    * Use shorthand hex values
-
-Bad:
-```css
-.selector {
-  background-color: #FFFFFF;
-  font-family: "Helvetica Neue", sans-serif;
-}
-```
-
-Good:
-```css
-.selector {
-  background-color: #fff;
-  font-family: "Helvetica Neue", sans-serif;
-}
-```
-
-#### Selectors
+### Selectors
 
 * Write one selector per line
 
@@ -108,7 +67,11 @@ Good:
 }
 ```
 
-#### Properties
+#### Naming Conventions
+
+* Use lowercase and separate words with hyphens, don't use camelCase or snake_case. An exception to this is to override some out
+
+### Declarations
 
 * Write one declaration per line
 
@@ -247,6 +210,25 @@ Default:
 }
 ```
 
+* Write lowercase values, except for font names
+    * Use shorthand hex values
+
+Bad:
+```css
+.selector {
+  background-color: #FFFFFF;
+  font-family: "Helvetica Neue", sans-serif;
+}
+```
+
+Good:
+```css
+.selector {
+  background-color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+}
+```
+
 * Long, comma-separated property values (eg. gradients or shadows) can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. In this case:
     * All values should be in a new line
     * Indentation of each value must be one level deeper than the declaration
@@ -277,7 +259,7 @@ Good:
 }
 ```
 
-#### Declaration ordering
+### Declaration ordering
 
 Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
 
@@ -318,10 +300,10 @@ Example:
 }
 ```
 
-#### Vendor Prefixes
+### Vendor Prefixes
 Don't add any declarations with them, use something like [PostCSS' Autoprefixer](https://github.com/postcss/autoprefixer). This way you only have to worry about the support of a given property.
 
-#### Format
+### Format
 
 * Include one space before the opening braces
 
@@ -442,7 +424,25 @@ Good:
 }
 ```
 
-#### Media Queries
+* Use double quotes instead of single quotes
+
+Bad:
+```css
+.selector {
+  background-image: url('images/half-quote.jpg');
+  content: '';
+}
+```
+
+Good:
+```css
+.selector {
+  background-image: url("images/half-quote.jpg");
+  content: "";
+}
+```
+
+### Media Queries
 All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
 
 Example:
@@ -473,16 +473,16 @@ Example:
 
 Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
 
-#### Location-based Styling
+### Location-based Styling
 
 Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
 (Outside the WordPress environment the advice is the same!)
 
-### Sass
+## Sass
 
 In writing SCSS the above, plus all that follows, should be taken into account.
 
-#### Declaration ordering
+### Declaration ordering
 
 1. `$variable` overrides **always** on top
 2. `@extend`
@@ -497,7 +497,7 @@ In writing SCSS the above, plus all that follows, should be taken into account.
 
 Each of these items should be separated from the next by an blank line.
 
-#### Nesting
+### Nesting
 
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
 
@@ -509,7 +509,7 @@ While nesting is great, too much of it can make the code harder to read than pla
 
 **Nesting can be used:** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
 
-#### File structure
+### File structure
 
 * Each logical module of code should live in its own file. Avoiding multiple objects in the same file allows for the use of the filesystem as a means to navigate the styles rather than relying on comments.
 * The following should always have a file of their own:
@@ -521,7 +521,7 @@ While nesting is great, too much of it can make the code harder to read than pla
 * All files should be partials, their name should start with an underscore `_`, except if the file is processed to a CSS file
 * If possible the files that generate the compiled CSS should never have anything other than `@import` statements and comments
 
-##### Folder structure
+#### Folder structure
 
 In most projects multiple Functions and Mixins will for sure exist. Considering this, the following structure should be the backbone for any project:
 
@@ -538,8 +538,16 @@ In most projects multiple Functions and Mixins will for sure exist. Considering 
  - main.scss
 ```
 
-#### Functions
+### Functions
 
-#### Mixins
+### Mixins
 
-#### Definitions
+### Definitions
+
+## Resources
+
+Most of what is here is not original – probably everything. We built this from analyzing and learning with others, below you will find our sources resources and other may appear along the document for a particular guideline. This document is our brand of [guidelines/rules of thumb/experience/magic dust] mixture and we'll evolve it along with our needs.
+
+* [WordPress CSS Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/)
+* [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
+* [Principles for writing consistent, clean, friendly Sass](https://github.com/anthonyshort/idiomatic-sass)
