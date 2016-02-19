@@ -20,9 +20,57 @@ This probably the main reason why code feels like it was written by different pe
 ### CSS
 
 * Zero values don't need units
+
+Bad:
+```css
+.selector {
+  margin: 0rem;
+}
+```
+
+Good:
+```css
+.selector {
+  margin: 0;
+}
+```
+
 * Use double quotes instead of single quotes
+
+Bad:
+```css
+.selector {
+  background-image: url('images/half-quote.jpg');
+  content: '';
+}
+```
+
+Good:
+```css
+.selector {
+  background-image: url("images/half-quote.jpg");
+  content: "";
+}
+```
+
 * Write lowercase values, except for font names
     * Use shorthand hex values
+
+Bad:
+```css
+.selector {
+  background-color: #FFFFFF;
+  font-family: "Helvetica", sans-serif;
+}
+```
+
+Good:
+```css
+.selector {
+  background-color: #fff;
+  font-family: "Helvetica", sans-serif;
+}
+```
 
 #### Selectors
 
@@ -217,6 +265,41 @@ Declarations should be ordered alphabetically or by type (Positioning, Box model
 
 When choosing type, each block of properties must be delimited by an empty line. (Comments are not required on each block, but must be explicit at least once in the style documentation.)
 
+Example:
+```css
+.selector {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  /* Display & Box Model */
+  border: 10px solid #333;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100px;
+  margin: 10px;
+  overflow: hidden;
+  padding: 10px;
+  width: 100px;
+
+  /* Typography */
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: right;
+
+  /* Visual */
+  background-color: #000;
+  background-image: url("images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+```
+
 #### Format
 
 * Include one space before the opening braces
@@ -351,7 +434,6 @@ nested declarations must have an empty line before the selector list if:
 
 #### Declaration ordering
 
-Sass:
 1. @extend
 2. @include
 3. Regular declarations (allows for overriding)
