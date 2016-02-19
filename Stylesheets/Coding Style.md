@@ -384,14 +384,14 @@ Bad:
 .selector {
   /* Declarations */
   }
-```css
+```
 
 Good:
 ```css
 .selector {
   /* Declarations */
 }
-```css
+```
 
 * Separate each rule set with a single blank line
 
