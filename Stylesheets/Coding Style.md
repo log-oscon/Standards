@@ -19,22 +19,6 @@ This probably the main reason why code feels like it was written by different pe
 
 ### CSS
 
-* Zero values don't need units
-
-Bad:
-```css
-.selector {
-  margin: 0rem;
-}
-```
-
-Good:
-```css
-.selector {
-  margin: 0;
-}
-```
-
 * Use double quotes instead of single quotes
 
 Bad:
@@ -60,7 +44,7 @@ Bad:
 ```css
 .selector {
   background-color: #FFFFFF;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 ```
 
@@ -68,7 +52,7 @@ Good:
 ```css
 .selector {
   background-color: #fff;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 ```
 
@@ -229,6 +213,40 @@ Good:
 }
 ```
 
+* Zero values don't need units
+
+Bad:
+```css
+.selector {
+  margin: 0rem;
+}
+```
+
+Good:
+```css
+.selector {
+  margin: 0;
+}
+```
+
+* Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/))
+
+Acceptable:
+```css
+.header {
+  font-size: 1.2rem;
+  line-height: 60px;
+}
+```
+
+Default:
+```css
+.selector {
+  font-size: .9rem;
+  line-height: 1.2;
+}
+```
+
 * Long, comma-separated property values (eg. gradients or shadows) can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. In this case:
     * All values should be in a new line
     * Indentation of each value must be one level deeper than the declaration
@@ -299,6 +317,9 @@ Example:
   background-repeat: no-repeat;
 }
 ```
+
+#### Vendor Prefixes
+Don't add any declarations with them, use something like [PostCSS' Autoprefixer](https://github.com/postcss/autoprefixer). This way you only have to worry about the support of a given property.
 
 #### Format
 
@@ -420,6 +441,37 @@ Good:
   color: rgb(31, 32, 33);
 }
 ```
+
+#### Media Queries
+All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
+
+Example:
+```css
+.select-1 {
+    color: #000;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .select-1 {
+        text-align: left;
+    }
+}
+
+.selector-2 {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .selector-2 {
+        display: inline-block;
+        width: 30%;
+    }
+}
+```
+
+Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
 
 #### Location-based Styling
 
