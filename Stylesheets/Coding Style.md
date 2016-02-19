@@ -521,6 +521,8 @@ While nesting is great, too much of it can make the code harder to read than pla
 * All files should be partials, their name should start with an underscore `_`, except if the file is processed to a CSS file
 * If possible the files that generate the compiled CSS should never have anything other than `@import` statements and comments
 
+##### Folder structure
+
 In most projects multiple Functions and Mixins will for sure exist. Considering this, the following structure should be the backbone for any project:
 
 ```
