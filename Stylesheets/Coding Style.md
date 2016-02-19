@@ -501,7 +501,7 @@ Each of these items should be separated from the next by an blank line.
 
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
 
-**Nesting required:** when it always makes the code easier to read:
+**Nesting required:** when it always makes the code easier to read
 * pseudo-classes
 * pseudo-elements
 * component states
