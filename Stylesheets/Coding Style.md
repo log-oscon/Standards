@@ -403,44 +403,25 @@ Good:
 }
 ```
 
-### Declaration ordering
-
-Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
-
-When choosing type, each block of properties must be delimited by an blank line. (Comments are not required on each block, but must be explicit at least once in the style documentation.)
+* Declarations should be ordered alphabetically.
 
 Example:
 ```css
 .selector {
-  /* Positioning */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-
-  /* Display & Box Model */
+  background-color: #000;
+  background-image: url("images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   border: 10px solid #333;
   box-sizing: border-box;
   display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
   height: 100px;
   margin: 10px;
   overflow: hidden;
   padding: 10px;
   width: 100px;
-
-  /* Typography */
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-align: right;
-
-  /* Visual */
-  background-color: #000;
-  background-image: url("images/bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 ```
 
