@@ -281,7 +281,7 @@ Good:
 
 Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
 
-When choosing type, each block of properties must be delimited by an empty line. (Comments are not required on each block, but must be explicit at least once in the style documentation.)
+When choosing type, each block of properties must be delimited by an blank line. (Comments are not required on each block, but must be explicit at least once in the style documentation.)
 
 Example:
 ```css
@@ -393,7 +393,7 @@ Good:
 }
 ```css
 
-* Separate each rule set with a single empty line
+* Separate each rule set with a single blank line
 
 Bad:
 ```css
@@ -480,16 +480,22 @@ Never use it. We code in WordPress, and there are many temptations to override o
 
 ### Sass
 
-nested declarations must have an empty line before the selector list if:
-    * The parent as @extend, @include or regular declarations
-    * There are other nested declarations before
+In writing SCSS the above, plus all that follows, should be taken into account.
 
 #### Declaration ordering
 
-1. @extend
-2. @include
-3. Regular declarations (allows for overriding)
-4. Nested declarations
+1. `$variable` overrides **always** on top
+2. `@extend`
+3. `@include`
+4. Regular declarations (allows for overriding)
+    5. Mixins with content blocks (`@media` declarations included here)
+6. Selectors that target itself:
+    1. pseudo-classes
+    2. pseudo-elements
+    3. component states
+5. Nested declarations
+
+Each of these items should be separated from the next by an blank line.
 
 #### Nesting
 
@@ -502,3 +508,11 @@ While nesting is great, too much of it can make the code harder to read than pla
 * media queries
 
 **Nesting can be used:** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
+
+#### File structure
+
+#### Functions
+
+#### Mixins
+
+#### Definitions
