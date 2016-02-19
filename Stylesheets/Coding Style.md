@@ -1,6 +1,6 @@
 # Coding Style
 
-We mainly use Sass (mainly written as SCSS) as a pre-processor to generate the final CSS styles for each project. As a result, our CSS coding style mixes with the Sass and on the following document we try to give this distinction by pointing to what only applies to Sass (in general because it is invalid CSS).
+We mainly use Sass (written as SCSS) as a pre-processor to generate the final CSS styles for each project. As a result, our CSS coding style mixes with the Sass and on the following document we try to give this distinction by pointing to what only applies to Sass (in general because it is invalid CSS).
 
 ## General principles
 
@@ -13,71 +13,343 @@ If you follow nothing else at least don't forget these next few lines.
 * When in doubt about a style raise the question for debate and proceed with existing common patterns (share these patterns when with your question).
 * Enforce the agreed-upon style, always. Code review is a particular example where this is almost mandatory.
 
-## Syntax an Formatting
+## Syntax and Formatting
+
 This probably the main reason why code feels like it was written by different people. By keeping the syntax and formatting the code in a clean way maintaining and debugging the code become easier tasks.
 
-### Syntax
+### CSS
+
+* Zero values don't need units
+* Use double quotes instead of single quotes
+* Write lowercase values, except for font names
+    * Use shorthand hex values
+
+#### Selectors
+
 * Write one selector per line
+
+Bad:
+```css
+.selector-1, .selector-2, .selector-3 {
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1,
+.selector-2,
+.selector-3 {
+  /* Declarations */
+}
+```
+
+* Quote attribute values in selectors
+
+Bad:
+```css
+input[type=checkbox] {
+  /* Declarations */
+}
+```
+
+Good:
+```css
+input[type="checkbox"] {
+  /* Declarations */
+}
+```
+
+* Never use IDs, they aren't re-usable
+
+Bad:
+```css
+#content {
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.content {
+  /* Declarations */
+}
+```
+
+#### Properties
+
 * Write one declaration per line
+
+Bad:
+```css
+.selector {
+  color: #fff; text-align: center; width: 20px;
+}
+```
+
+Good:
+```css
+.selector {
+  color: #fff;
+  text-align: center;
+  width: 20px;
+}
+```
+
+* Include one space before each declaration value
+
+Bad:
+```css
+.selector {
+  color:#fff;
+  text-align:center;
+  width:20px;
+}
+```
+
+Good:
+```css
+.selector {
+  color: #fff;
+  text-align: center;
+  width: 20px;
+}
+```
+
+* All declarations must end with a semi-colon, even the last one, to avoid error
+
+Bad:
+```css
+.selector {
+  color: #fff;
+  text-align: center;
+  width: 20px
+}
+```
+
+Good:
+```css
+.selector {
+  color: #fff;
+  text-align: center;
+  width: 20px;
+}
+```
+
+* Use one level of indentation for each declaration
+
+Bad:
+```css
+.selector {
+  color: #fff;
+    text-align: center;
+    width: 20px;
+}
+```
+
+Bad:
+```css
+.selector {
+color: #fff;
+text-align: center;
+width: 20px;
+}
+```
+
+Good:
+```css
+.selector {
+  color: #fff;
+  text-align: center;
+  width: 20px;
+}
+```
+
+* Don't use shorthand notations to set only one value
+
+Bad:
+```css
+.selector {
+  background: blue;
+}
+```
+
+Good:
+```css
+.selector {
+  background-color: blue;
+}
+```
+
+* Long, comma-separated property values (eg. gradients or shadows) can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. In this case:
+    * All values should be in a new line
+    * Indentation of each value must be one level deeper than the declaration
+    * Commas should be at the end of each property
+    * The last property must end with the declaration's semi-colon
+
+Acceptable:
+```css
+.selector {
+  box-shadow: 0 2px 2px #ccc, 0 -2px 2px #ccc;
+}
+```
+
+Bad:
+```css
+.selector {
+  box-shadow: 0 2px 2px #ccc,
+  0 -2px 2px #ccc;
+}
+```
+
+Good:
+```css
+.selector {
+  box-shadow:
+    0 2px 2px #ccc,
+    0 -2px 2px #ccc;
+}
+```
+
+#### Declaration ordering
+
+Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
+
+When choosing type, each block of properties must be delimited by an empty line. (Comments are not required on each block, but must be explicit at least once in the style documentation.)
+
+#### Format
+
+* Include one space before the opening braces
+
+Bad:
+```css
+.selector-1,
+.selector-2{
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */
+}
+```
+
 * Opening braces on the same line as the last selector in the list
+
+Bad:
+```css
+.selector-1,
+.selector-2
+{
+  /* Declarations */
+}
+```
+
+Good:
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */
+}
+```
+
 * Closing braces on a different line
 
 Bad:
-```
-.selector-1, .selector-2, .selector-3 {
-    background-color: blue; color: yellow;
-    height: 150px;
-    width: 100px; }
+```css
+.selector-1,
+.selector-2 {
+  /* Declarations */ }
 ```
 
 Good:
-```
+```css
 .selector-1,
-.selector-2,
-.selector-3 {
-    background-color: blue;
-    color: yellow;
-    height: 150px;
-    width: 100px;
+.selector-2 {
+  /* Declarations */
 }
 ```
 
-* Include one space before the opening braces
-* Include one space before each declaration value
-* Include one space after each comma on comma-separated values
+* Place the closing brace of a ruleset in the same column as the first character of the ruleset
 
 Bad:
-```
-.selector-1,.selector-2,.selector-3{
-    color: blue;
-    box-shadow:0 1px 2px #000,2px 1px 2px #999;
+```css
+.selector {
+  /* Declarations */
+  }
+```css
+
+Good:
+```css
+.selector {
+  /* Declarations */
+}
+```css
+
+* Separate each rule set with a single empty line
+
+Bad:
+```css
+.selector-1 {
+  /* Declarations */
+}
+.selector-2 {
+  /* Declarations */
 }
 ```
 
 Good:
-```
-.selector-1,
-.selector-2,
-.selector-3 {
-    color: blue;
-    box-shadow: 0 1px 2px #000, 2px 1px 2px #999;
+```css
+.selector-1 {
+  /* Declarations */
+}
+
+.selector-2 {
+  /* Declarations */
 }
 ```
 
-* Use lowercase for all values, except font names
-* Zero values don't need units
-* All declarations must end with a semi-colon, even the last one, to avoid error
-* Use single quotes instead of double quotes
-* Don't use shorthand notations to set only one value
+* Include one space on comma-separated values, after each comma
 
-### Format
-* Indentation should be in spaces, two for each level (Editor Config's dotfile should be used, if possible)
-* Sass: nested declarations must have an empty line before the selector list if:
+Bad:
+```css
+.selector-1 {
+  background-image: url("images/my-lovely-face.png"),url("images/my-pink-background.png");
+}
+
+.selector-2 {
+  background-image: linear-gradient(to top,yellow,pink);
+  color: rgb(32,32,33);
+}
+```
+
+Good:
+```css
+.selector-1 {
+  background-image: url("images/my-lovely-face.png"), url("images/my-pink-background.png");
+}
+
+.selector-2 {
+  background-image: linear-gradient(to top, yellow, pink);
+  color: rgb(31, 32, 33);
+}
+```
+
+#### Location-based Styling
+
+Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
+(Outside the WordPress environment the advice is the same!)
+
+### Sass
+
+nested declarations must have an empty line before the selector list if:
     * The parent as @extend, @include or regular declarations
     * There are other nested declarations before
 
 #### Declaration ordering
-Declarations should be ordered alphabetically or by type (Positioning, Box model, Typography, Visual). Whichever is chosen, it must be consistent across all files in the project.
 
 Sass:
 1. @extend
@@ -85,7 +357,8 @@ Sass:
 3. Regular declarations (allows for overriding)
 4. Nested declarations
 
-#### Sass: Nesting
+#### Nesting
+
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
 
 **Nesting required:** when it always makes the code easier to read:
