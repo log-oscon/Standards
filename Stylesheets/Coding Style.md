@@ -28,16 +28,14 @@ Never use it. We code in WordPress, and there are many temptations to override o
 
 * Include one space before the opening braces
 
-Bad:
 ```css
+/* Bad */
 .selector-1,
 .selector-2{
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 .selector-1,
 .selector-2 {
   /* Declarations */
@@ -46,17 +44,15 @@ Good:
 
 * Opening braces on the same line as the last selector in the list
 
-Bad:
 ```css
+/* Bad */
 .selector-1,
 .selector-2
 {
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 .selector-1,
 .selector-2 {
   /* Declarations */
@@ -65,15 +61,13 @@ Good:
 
 * Closing braces on a different line
 
-Bad:
 ```css
+/* Bad */
 .selector-1,
 .selector-2 {
   /* Declarations */ }
-```
 
-Good:
-```css
+/* Good */
 .selector-1,
 .selector-2 {
   /* Declarations */
@@ -82,15 +76,13 @@ Good:
 
 * Place the closing brace of a ruleset in the same column as the first character of the ruleset
 
-Bad:
 ```css
+/* Bad */
 .selector {
   /* Declarations */
   }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   /* Declarations */
 }
@@ -98,18 +90,16 @@ Good:
 
 * Separate each rule set with a single blank line
 
-Bad:
 ```css
+/* Bad */
 .selector-1 {
   /* Declarations */
 }
 .selector-2 {
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 .selector-1 {
   /* Declarations */
 }
@@ -121,8 +111,8 @@ Good:
 
 * Include one space on comma-separated values, after each comma
 
-Bad:
 ```css
+/* Bad */
 .selector-1 {
   background-image: url("images/my-lovely-face.png"),url("images/my-pink-background.png");
 }
@@ -131,10 +121,8 @@ Bad:
   background-image: linear-gradient(to top,yellow,pink);
   color: rgb(32,32,33);
 }
-```
 
-Good:
-```css
+/* Good */
 .selector-1 {
   background-image: url("images/my-lovely-face.png"), url("images/my-pink-background.png");
 }
@@ -147,16 +135,14 @@ Good:
 
 * Use double quotes instead of single quotes
 
-Bad:
 ```css
+/* Bad */
 .selector {
   background-image: url('images/half-quote.jpg');
   content: '';
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   background-image: url("images/half-quote.jpg");
   content: "";
@@ -167,15 +153,13 @@ Good:
 
 * Write one selector per line
 
-Bad:
 ```css
+/* Bad */
 .selector-1, .selector-2, .selector-3 {
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 .selector-1,
 .selector-2,
 .selector-3 {
@@ -185,15 +169,13 @@ Good:
 
 * Quote attribute values in selectors
 
-Bad:
 ```css
+/* Bad */
 input[type=checkbox] {
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 input[type="checkbox"] {
   /* Declarations */
 }
@@ -201,15 +183,13 @@ input[type="checkbox"] {
 
 * Never use IDs, they aren't re-usable
 
-Bad:
 ```css
+/* Bad */
 #content {
   /* Declarations */
 }
-```
 
-Good:
-```css
+/* Good */
 .content {
   /* Declarations */
 }
@@ -219,15 +199,13 @@ Good:
 
 * Write one declaration per line
 
-Bad:
 ```css
+/* Bad */
 .selector {
   color: #fff; text-align: center; width: 20px;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   color: #fff;
   text-align: center;
@@ -237,17 +215,15 @@ Good:
 
 * Include one space before each declaration value
 
-Bad:
 ```css
+/* Bad */
 .selector {
   color:#fff;
   text-align:center;
   width:20px;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   color: #fff;
   text-align: center;
@@ -257,17 +233,15 @@ Good:
 
 * All declarations must end with a semi-colon, even the last one, to avoid error
 
-Bad:
 ```css
+/* Bad */
 .selector {
   color: #fff;
   text-align: center;
   width: 20px
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   color: #fff;
   text-align: center;
@@ -277,26 +251,22 @@ Good:
 
 * Use one level of indentation for each declaration
 
-Bad:
 ```css
+/* Bad */
 .selector {
   color: #fff;
     text-align: center;
     width: 20px;
 }
-```
 
-Bad:
-```css
+/* Bad */
 .selector {
 color: #fff;
 text-align: center;
 width: 20px;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   color: #fff;
   text-align: center;
@@ -306,15 +276,13 @@ Good:
 
 * Don't use shorthand notations to set only one value
 
-Bad:
 ```css
+/* Bad */
 .selector {
   background: blue;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   background-color: blue;
 }
@@ -322,15 +290,13 @@ Good:
 
 * Zero values don't need units
 
-Bad:
 ```css
+/* Bad */
 .selector {
   margin: 0rem;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   margin: 0;
 }
@@ -338,16 +304,14 @@ Good:
 
 * Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/))
 
-Acceptable:
 ```css
+/* Acceptable */
 .header {
   font-size: 1.2rem;
   line-height: 60px;
 }
-```
 
-Default:
-```css
+/* Default */
 .selector {
   font-size: .9rem;
   line-height: 1.2;
@@ -357,16 +321,14 @@ Default:
 * Write lowercase values, except for font names
     * Use shorthand hex values
 
-Bad:
 ```css
+/* Bad */
 .selector {
   background-color: #FFFFFF;
   font-family: "Helvetica Neue", sans-serif;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   background-color: #fff;
   font-family: "Helvetica Neue", sans-serif;
@@ -379,23 +341,19 @@ Good:
     * Commas should be at the end of each property
     * The last property must end with the declaration's semi-colon
 
-Acceptable:
 ```css
+/* Acceptable */
 .selector {
   box-shadow: 0 2px 2px #ccc, 0 -2px 2px #ccc;
 }
-```
 
-Bad:
-```css
+/* Bad */
 .selector {
   box-shadow: 0 2px 2px #ccc,
   0 -2px 2px #ccc;
 }
-```
 
-Good:
-```css
+/* Good */
 .selector {
   box-shadow:
     0 2px 2px #ccc,
@@ -405,8 +363,8 @@ Good:
 
 * Declarations should be ordered alphabetically.
 
-Example:
 ```css
+/* Example */
 .selector {
   background-color: #000;
   background-image: url("images/bg.jpg");
@@ -431,8 +389,8 @@ Don't add any declarations with them, use something like [PostCSS' Autoprefixer]
 ### Media Queries
 All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
 
-Example:
 ```css
+/* Example */
 .select-1 {
     color: #000;
     text-align: center;
