@@ -511,6 +511,31 @@ While nesting is great, too much of it can make the code harder to read than pla
 
 #### File structure
 
+* Each logical module of code should live in its own file. Avoiding multiple objects in the same file allows for the use of the filesystem as a means to navigate the styles rather than relying on comments.
+* The following should always have a file of their own:
+    * Variables
+    * Functions
+    * Mixins
+    * Placeholders
+* Files should be named for easy grasp of their contents
+* All files should be partials, their name should start with an underscore `_`, except if the file is processed to a CSS file
+* If possible the files that generate the compiled CSS should never have anything other than `@import` statements and comments
+
+In most projects multiple Functions and Mixins will for sure exist. Considering this, the following structure should be the backbone for any project:
+
+```
+/styles
+|-/functions
+| |- _calc-awesome.scss
+|  - _catch-fire.scss
+|-/mixins
+| |- _button.scss
+| |- _media-queries.scss
+|  - _positioning
+|- _variables.scss
+ - main.scss
+```
+
 #### Functions
 
 #### Mixins
