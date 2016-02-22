@@ -15,18 +15,10 @@ If you follow nothing else at least don't forget these next few lines.
 
 ## CSS
 
-### Naming Conventions
-
-* Use lowercase and separate words with hyphens, don't use camelCase or snake_case. An exception to this is to override some out
-
-### Location-based Styling
-
-Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
-(Outside the WordPress environment the advice is the same!)
-
 ### Format
 
-* Include one space before the opening braces
+* Use soft-tabs with a two space indent. Spaces are the only way to guarantee code renders the same in any person’s environment.
+* Include one space before the opening braces.
 
 ```css
 /* Bad */
@@ -42,7 +34,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Opening braces on the same line as the last selector in the list
+* Opening braces on the same line as the last selector in the list.
 
 ```css
 /* Bad */
@@ -59,7 +51,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Closing braces on a different line
+* Closing braces on a different line.
 
 ```css
 /* Bad */
@@ -74,7 +66,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Place the closing brace of a ruleset in the same column as the first character of the ruleset
+* Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 
 ```css
 /* Bad */
@@ -88,7 +80,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Separate each rule set with a single blank line
+* Separate each rule set with a single blank line.
 
 ```css
 /* Bad */
@@ -109,7 +101,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Include one space on comma-separated values, after each comma
+* Include one space on comma-separated values, after each comma.
 
 ```css
 /* Bad */
@@ -119,7 +111,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 
 .selector-2 {
   background-image: linear-gradient(to top,yellow,pink);
-  color: rgb(32,32,33);
+  color: rgba(32,32,33,.5);
 }
 
 /* Good */
@@ -129,11 +121,11 @@ Never use it. We code in WordPress, and there are many temptations to override o
 
 .selector-2 {
   background-image: linear-gradient(to top, yellow, pink);
-  color: rgb(31, 32, 33);
+  color: rgba(31, 32, 33, .5);
 }
 ```
 
-* Use double quotes instead of single quotes
+* Use double quotes instead of single quotes.
 
 ```css
 /* Bad */
@@ -149,9 +141,11 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
+* Use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS’ `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
+
 ### Selectors
 
-* Write one selector per line
+* Write one selector per line.
 
 ```css
 /* Bad */
@@ -167,7 +161,7 @@ Never use it. We code in WordPress, and there are many temptations to override o
 }
 ```
 
-* Quote attribute values in selectors
+* Quote attribute values in selectors.
 
 ```css
 /* Bad */
@@ -181,7 +175,7 @@ input[type="checkbox"] {
 }
 ```
 
-* Never use IDs, they aren't re-usable
+* Never use IDs, they aren't re-usable.
 
 ```css
 /* Bad */
@@ -197,7 +191,7 @@ input[type="checkbox"] {
 
 ### Declarations
 
-* Write one declaration per line
+* Write one declaration per line.
 
 ```css
 /* Bad */
@@ -213,7 +207,7 @@ input[type="checkbox"] {
 }
 ```
 
-* Include one space before each declaration value
+* Include one space before each declaration value.
 
 ```css
 /* Bad */
@@ -231,7 +225,7 @@ input[type="checkbox"] {
 }
 ```
 
-* All declarations must end with a semi-colon, even the last one, to avoid error
+* All declarations must end with a semi-colon, even the last one, to avoid error.
 
 ```css
 /* Bad */
@@ -249,7 +243,7 @@ input[type="checkbox"] {
 }
 ```
 
-* Use one level of indentation for each declaration
+* Use one level of indentation for each declaration.
 
 ```css
 /* Bad */
@@ -274,7 +268,7 @@ width: 20px;
 }
 ```
 
-* Don't use shorthand notations to set only one value
+* Don't use shorthand notations to set only one value.
 
 ```css
 /* Bad */
@@ -288,7 +282,7 @@ width: 20px;
 }
 ```
 
-* Zero values don't need units
+* Zero values don't need units.
 
 ```css
 /* Bad */
@@ -302,7 +296,7 @@ width: 20px;
 }
 ```
 
-* Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/))
+* Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)).
 
 ```css
 /* Acceptable */
@@ -318,8 +312,8 @@ width: 20px;
 }
 ```
 
-* Write lowercase values, except for font names
-    * Use shorthand hex values
+* Write lowercase values, except for font names.
+    * Use shorthand hex values.
 
 ```css
 /* Bad */
@@ -384,9 +378,11 @@ width: 20px;
 ```
 
 ### Vendor Prefixes
+
 Don't add any declarations with them, use something like [PostCSS' Autoprefixer](https://github.com/postcss/autoprefixer). This way you only have to worry about the support of a given property.
 
 ### Media Queries
+
 All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
 
 ```css
@@ -417,6 +413,17 @@ All the `@media` rulesets should be placed after each rule with the declarations
 
 Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
 
+### Naming Classes
+
+#### Interaction Classes
+
+Class names starting with `js-` (e.g. `.js-search-toggle`) should never be styled. These classes serve as bindings for JavaScript events and allow styles to be completely changed without, including class names, without any loss of functionality.
+
+### Location-based Styling
+
+Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
+(Outside the WordPress environment the advice is the same!)
+
 ## Sass
 
 In writing SCSS the above, plus all that follows, should be taken into account.
@@ -440,13 +447,15 @@ Each of these items should be separated from the next by an blank line.
 
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
 
-**Nesting required:** when it always makes the code easier to read
-* pseudo-classes
-* pseudo-elements
-* component states
-* media queries
+* Nesting should not be **deeper than 3 levels**. If it can't be helped, step back and rethink the overall strategy.
 
-**Nesting can be used:** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
+* **Nesting required** when it always makes the code easier to read
+    * pseudo-classes
+    * pseudo-elements
+    * component states
+    * media queries
+
+* **Nesting can be used** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
 
 ### File structure
 
