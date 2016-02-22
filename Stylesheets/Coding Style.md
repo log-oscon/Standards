@@ -413,6 +413,17 @@ All the `@media` rulesets should be placed after each rule with the declarations
 
 Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
 
+
+### Don't use `@import`
+
+Compared to `<link>`, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Since we use Sass we don't really require any action, because the `@import` statement will include the contents on the compiled CSS file. However, if Sass or any other pre-processor are not an option you should opt for an alternate approach:
+
+* Use multiple <link> elements.
+* Concatenate your CSS files with features provided in Rails, Jekyll, and other environments.
+
+For more information, [read this article by Steve Souders](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/).
+
+
 ### Naming Classes
 
 #### Interaction Classes
