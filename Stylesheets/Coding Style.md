@@ -475,16 +475,23 @@ In most projects multiple Functions and Mixins will for sure exist. Considering 
 
 ```
 /styles
-|-/functions
-| |- _calc-awesome.scss
-|  - _catch-fire.scss
-|-/mixins
-| |- _button.scss
-| |- _media-queries.scss
-|  - _positioning
-|- _variables.scss
- - main.scss
+|--/vendor
+|--/functions
+|  |-- _calc-awesome.scss
+|   -- _catch-fire.scss
+|--/mixins
+|  |-- _button.scss
+|  |-- _media-queries.scss
+|   -- _positioning
+|-- _variables.scss
+ -- main.scss
 ```
+
+* `vendor/`: contains all of the CSS from outside your codebase, usually relating to JavaScript dependencies.
+* `functions/`: contains all of your Sass functions.
+* `mixins/`: contains all of your Sass mixins.
+* `_variables.scss`: contains all of your global variables.
+* `main.scss`: used to import everything needed to generate the output CSS file.
 
 ### Functions
 
@@ -499,3 +506,4 @@ Most of what is here is not original – probably everything. We built this from
 * [WordPress CSS Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/)
 * [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [Principles for writing consistent, clean, friendly Sass](https://github.com/anthonyshort/idiomatic-sass)
+* [How we do CSS at Ghost](https://dev.ghost.org/css-at-ghost/)
