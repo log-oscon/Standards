@@ -454,6 +454,22 @@ In writing SCSS the above, plus all that follows, should be taken into account.
 
 Each of these items should be separated from the next by an blank line.
 
+### Operators
+
+For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
+
+```scss
+// Bad example
+.element {
+  margin: 10px 0 @variable*2 10px;
+}
+
+// Good example
+.element {
+  margin: 10px 0 (@variable * 2) 10px;
+}
+```
+
 ### Nesting
 
 While nesting is great, too much of it can make the code harder to read than plain boring ol' CSS. Also, it creates excessive over specificity which results in greater specificity when overriding styles. As a rule, nesting should be avoided as much as possible.
@@ -518,3 +534,4 @@ Most of what is here is not original – probably everything. We built this from
 * [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [Principles for writing consistent, clean, friendly Sass](https://github.com/anthonyshort/idiomatic-sass)
 * [How we do CSS at Ghost](https://dev.ghost.org/css-at-ghost/)
+* [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
