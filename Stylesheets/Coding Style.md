@@ -531,7 +531,7 @@ These classes should be added according to the projects needs. **Strive to have 
 * They can be used interactively (added through JavaScript), although State Classes are preferable, or to extend/override an element's property in a situation where using a modifier seems excessive.
 * They should never be used where State Classes apply.
 * Given their "short nature" (only one declaration per helper class) these rules should be written inline.
-* *SCSS:* They should never be `@extend`ed on any other selector.
+* ***SCSS:*** They should never be `@extend`ed on any other selector.
 
 ```css
 /* Examples */
@@ -551,9 +551,9 @@ These classes should be added according to the projects needs. **Strive to have 
 Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
 (Outside the WordPress environment the advice is the same!)
 
-## Sass
+## SCSS
 
-In writing SCSS the above, plus all that follows, should be taken into account.
+In writing SCSS, the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section.
 
 ### Declaration ordering
 
