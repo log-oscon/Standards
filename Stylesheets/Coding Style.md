@@ -453,17 +453,18 @@ For more information, [read this article by Steve Souders](http://www.stevesoude
 
 ### Naming Classes
 
-We follow the general principles of [Block Element Modifier (BEM)](https://en.bem.info/) with our twist to make things fit our development needs. The selector types that we have are very similar to BEM, and we support both boolean modifiers and key value modifiers.
+We follow the general principles of [Block Element Modifier (BEM)](https://en.bem.info/) with our twist to make things fit our development needs. The selector types that we have are very similar to BEM, and we support both boolean modifiers and key-value modifiers.
 The main differences lay in the fact that we separate modifier names with a double hyphen (`--`) and modifier values with a single hyphen (`-`). Also, we don't use multiple word modifiers, either for their names or their values (in the key-value scenario).
 
 To define our BEM entities we use the following string format:
 ```
 block[--blockModName[-modVal]][__element[--elementModName[-modVal]]]
 ```
+*Note:* camelCase is used to avoid confusion in the representation of the string parts. Its use is not endorsed by this style guide.
 
 Rules for each part of the string:
 * `block` and `__element` - The name of the block and element, respectively. Can be a multiple word name with hyphens between words.
-* `--blockModName` and `--elementModName` - Block and element boolean modifier name, respectively. Must be a single word, no hyphens or underscores.
+* `--blockModName` and `--elementModName` - Block and element boolean modifier name or modifier key, respectively. Must be a single word, no hyphens or underscores.
 * `-modVal` - Modifier's value in key-value format. Must be a single word, no hyphens or underscores.
 
 Available selector variations:
