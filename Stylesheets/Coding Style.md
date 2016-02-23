@@ -445,9 +445,64 @@ For more information, [read this article by Steve Souders](http://www.stevesoude
 
 ### Naming Classes
 
+We follow the general principles of [Block Element Modifier (BEM)](https://en.bem.info/) with our twist to make things fit our development needs. The selector types that we have are very similar to BEM, and we support both boolean modifiers and key value modifiers.
+The main differences lay in the fact that we separate modifier names with a double hyphen (`--`) and modifier values with a single hyphen (`-`). Also, we don't use multiple word modifiers, either for their names or their values (in the key-value scenario).
+
+To define our BEM entities we use the following string format:
+```
+block[--blockModName[-modVal]][__element[--elementModName[-modVal]]]
+```
+
+Rules for each part of the string:
+* `block` and `__element` - The name of the block and element, respectively. Can be a multiple word name with hyphens between words.
+* `--blockModName` and `--elementModName` - Block and element boolean modifier name, respectively. Must be a single word, no hyphens or underscores.
+* `-modVal` - Modifier's value in key-value format. Must be a single word, no hyphens or underscores.
+
+Available selector variations:
+* `block` - The block.
+* `block--blockModName` - The block with a boolean modifier.
+* `block--blockModName-modVal` - The block with a key-value modifier.
+* `block__element` - The element inside the block.
+* `block--blockModName__element` The element inside the block with a boolean modifier.
+* `block--blockModName-modVal__element` - The element inside the block with a key-value modifier.
+* `block__element--elementMod` - The element with a boolean modifier inside the block.
+* `block--blockModName__element--elementMod` - The element inside the block, both with a boolean modifier.
+* `block--blockModName-modVal__element--elementMod` - The element with a boolean modifier inside the block with a key-value modifier.
+* `block__element--elementMod-modVal` - The element with a key-value modifier inside the block.
+* `block--blockModName__element--elementMod-modVal` - The element with a key-value modifier inside a block with a boolean modifier.
+* `block--blockModName-modVal__element--elementMod-modVal` - The element inside the block, both with a key-value modifier.
+
+#### State classes
+
 #### Interaction Classes
 
 Class names starting with `js-` (e.g. `.js-search-toggle`) should never be styled. These classes serve as bindings for JavaScript events and allow styles to be completely changed without, including class names, without any loss of functionality.
+
+#### Helper Classes
+
+These classes should be added according to the projects need, not at the start.
+
+* The first character should always be a hyphen `-`.
+* The names should consist of a single word. Two words are accepted for variations of the same helper (e.g. `.-text-blue`).
+* When naming, the property and its value should be explicit in the name.
+* They should not declare more than a property.
+* They should mostly be used interactively, that is, added by JavaScript as a response to conditional situations the user may encounter.
+* They should never be used where State Classes apply.
+* Given their "short nature" (only one declaration per helper class) these rules should be write inline.
+* *SCSS:* They should never be `@extend`ed on any other selector.
+
+```css
+/* Examples */
+.-text-blue { color: blue; }
+
+.-text-green { color: green; }
+
+.-inline { display: inline; }
+
+.-hidden { display: none; }
+
+.-visible { display: block; }
+```
 
 ### Location-based Styling
 
