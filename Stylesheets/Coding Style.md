@@ -315,7 +315,7 @@ width: 20px;
 }
 ```
 
-* Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)).
+* Line height should also be unit-less, unless it is required to be a specific value for layout purposes. (The fact that line height can accept unit-less values and that this should be preferable is kind of old, [2006 old](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/).)
 
 ```css
 /* Acceptable */
@@ -631,3 +631,4 @@ Most of what is here is not original – probably everything. We built this from
 * [Principles for writing consistent, clean, friendly Sass](https://github.com/anthonyshort/idiomatic-sass)
 * [How we do CSS at Ghost](https://dev.ghost.org/css-at-ghost/)
 * [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
+* [BEM. Block Element Modifier](https://en.bem.info/)
