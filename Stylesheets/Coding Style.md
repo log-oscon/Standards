@@ -522,7 +522,7 @@ Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must
 
 #### Helper Classes
 
-These classes should be added according to the projects need, not at the start. (**Very important:** strive to have zero helper classes.)
+These classes should be added according to the projects needs. **Strive to have zero helper classes**, they should be like a transient state of the code, something like a new modifier or state class.
 
 * The first character should always be a hyphen `-`.
 * When naming, the property and its value should be explicit in the name.
