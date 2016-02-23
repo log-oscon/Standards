@@ -530,7 +530,7 @@ These classes should be added according to the projects needs. **Strive to have 
 * They should not declare more than a property.
 * They can be used interactively (added through JavaScript), although State Classes are preferable, or to extend/override an element's property in a situation where using a modifier seems excessive.
 * They should never be used where State Classes apply.
-* Given their "short nature" (only one declaration per helper class) these rules should be write inline.
+* Given their "short nature" (only one declaration per helper class) these rules should be written inline.
 * *SCSS:* They should never be `@extend`ed on any other selector.
 
 ```css
