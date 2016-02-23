@@ -101,6 +101,22 @@ If you follow nothing else at least don't forget these next few lines.
 }
 ```
 
+* Use double quotes instead of single quotes.
+
+```css
+/* Bad */
+.selector {
+  background-image: url('images/half-quote.jpg');
+  content: '';
+}
+
+/* Good */
+.selector {
+  background-image: url("images/half-quote.jpg");
+  content: "";
+}
+```
+
 * Include one space on comma-separated values, after each comma.
 
 ```css
@@ -125,23 +141,26 @@ If you follow nothing else at least don't forget these next few lines.
 }
 ```
 
-* Use double quotes instead of single quotes.
+* Use hex color codes `#000` unless using `rgba()` in raw CSS. Although it's not much, it allows for a given color to be specified with less characters, reducing the final file size without any loss of specificity as both method map the same color space. (*Note:* SCSS’ `rgba()` function is overloaded to accept hex colors as a parameter.)
 
-```css
+```scss
 /* Bad */
 .selector {
-  background-image: url('images/half-quote.jpg');
-  content: '';
+    background-color: rgba(255, 221, 102, .8);
+    color: rgb(0, 136, 255);
 }
 
 /* Good */
 .selector {
-  background-image: url("images/half-quote.jpg");
-  content: "";
+    background-color: rgba(255, 221, 102, .8);
+    color: #08f;
+}
+
+// SASS
+.selector {
+    background-color: rgba(#fd6, .8);
 }
 ```
-
-* Use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS’ `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
 
 ### Selectors
 
