@@ -432,6 +432,14 @@ All the `@media` rulesets should be placed after each rule with the declarations
 
 Default styles should be mobile-first, with variations/corrections added with media queries conditioned with `min-width`. However, the use of `max-width` is encouraged if it results in easier code to read and maintain.
 
+```css
+/* Example */
+@media (max-width: 480px) {
+    .mobile-prevent-scroll {
+        /* Declarations */
+    }
+}
+```
 
 ### Don't use `@import`
 
