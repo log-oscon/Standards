@@ -548,7 +548,7 @@ These classes should be added according to the projects needs. **Strive to have 
 
 ### Location-based Styling
 
-Never use it. We code in WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
+Never use it. We code mainly for WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
 (Outside the WordPress environment the advice is the same!)
 
 ## SCSS
