@@ -156,7 +156,7 @@ If you follow nothing else at least don't forget these next few lines.
     color: #08f;
 }
 
-// SASS
+// SCSS
 .selector {
     background-color: rgba(#fd6, .8);
 }
