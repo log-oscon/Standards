@@ -474,19 +474,41 @@ Available selector variations:
 
 #### State classes
 
+A state is something that augments the current module e a very specific way, not necessarily in the properties it defines, but in the resulting output. Forms are a particular example where there will be state classes for sure. When a form field has errors or the field was filled successfully classes like `.is-success` or `.is-error` will bring styles to the element highlighting this state.
+
+These classes, given that their job is to force a given style over everything else, may use `!important`, but only if there is no other way to be sure their styles will always override the ones from the element. When, using `!important`, there must be a comment stating the reason.
+
+* Never create a ruleset with a selector composed of just the State Class, this makes it so there are no "default" properties for that class and avoids problems if (god forbid) the need to use `!important` arises.
+* Avoid, with all your might, the use of `!important` in the declarations.
+* Always comment the declarations where you failed to not use `!important`.
+
+```css
+/* Bad */
+.is-error {
+    border-color: red;
+    color: red !important;
+}
+
+/* Good */
+.selector.is-error {
+    border-color: red;
+    color: red !important; /* Very important reason. */
+}
+```
+
 #### Interaction Classes
 
 Class names starting with `js-` (e.g. `.js-search-toggle`) should never be styled. These classes serve as bindings for JavaScript events and allow styles to be completely changed without, including class names, without any loss of functionality.
 
 #### Helper Classes
 
-These classes should be added according to the projects need, not at the start.
+These classes should be added according to the projects need, not at the start. (**Very important:** strive to have zero helper classes.)
 
 * The first character should always be a hyphen `-`.
-* The names should consist of a single word. Two words are accepted for variations of the same helper (e.g. `.-text-blue`).
 * When naming, the property and its value should be explicit in the name.
+* The names should consist of a single word. Two words are accepted for variations of the same helper or to give more information (e.g. `.-text-blue`).
 * They should not declare more than a property.
-* They should mostly be used interactively, that is, added by JavaScript as a response to conditional situations the user may encounter.
+* They can be used interactively (added through JavaScript), although State Classes are preferable, or to extend/override an element's property in a situation where using a modifier seems excessive.
 * They should never be used where State Classes apply.
 * Given their "short nature" (only one declaration per helper class) these rules should be write inline.
 * *SCSS:* They should never be `@extend`ed on any other selector.
