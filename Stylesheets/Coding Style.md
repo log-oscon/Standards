@@ -287,6 +287,28 @@ width: 20px;
 }
 ```
 
+* Declarations should be ordered alphabetically.
+
+```css
+/* Example */
+.selector {
+  background-color: #000;
+  background-image: url("images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 10px solid #333;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 100px;
+  margin: 10px;
+  overflow: hidden;
+  padding: 10px;
+  width: 100px;
+}
+```
+
 * Don't use shorthand notations to set only one value.
 
 ```css
@@ -301,7 +323,7 @@ width: 20px;
 }
 ```
 
-* Zero values don't need units.
+* Zero values for length dimensions don't need units. (If we are talking about time, put the units in there, some browsers deem the declaration invalid otherwise.)
 
 ```css
 /* Bad */
@@ -374,25 +396,28 @@ width: 20px;
 }
 ```
 
-* Declarations should be ordered alphabetically.
+* Strenuously avoid declaring the `height` property, prefer the use of min-height. When it can't be avoided, consider what happens if somehow the content gets bigger than the declared height.
 
 ```css
-/* Example */
+/* Bad */
 .selector {
-  background-color: #000;
-  background-image: url("images/bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 10px solid #333;
-  box-sizing: border-box;
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 16px;
-  height: 100px;
-  margin: 10px;
-  overflow: hidden;
-  padding: 10px;
-  width: 100px;
+    display: inline-block;
+    height: 50px;
+}
+
+/* Good */
+.selector {
+    display: inline-block;
+    min-height: 50px;
+}
+```
+
+* Never use `!important`.
+
+```css
+/* Bad */
+.selector {
+    color: red !important;
 }
 ```
 
@@ -557,7 +582,7 @@ In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the 
 
 ### Declaration ordering
 
-1. `$variable` overrides **always** on top
+1. `$variable` (local overrides or private)
 2. `@extend`
 3. `@include`
 4. Regular declarations (allows for overriding)
@@ -652,3 +677,4 @@ Most of what is here is not original – probably everything. We built this from
 * [How we do CSS at Ghost](https://dev.ghost.org/css-at-ghost/)
 * [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
 * [BEM. Block Element Modifier](https://en.bem.info/)
+* [Sass Guidelines](http://sass-guidelin.es)
