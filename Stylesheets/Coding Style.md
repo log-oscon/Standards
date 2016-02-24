@@ -553,7 +553,7 @@ Never use it. We code mainly for WordPress, and there are many temptations to ov
 
 ## SCSS
 
-In writing SCSS, the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section.
+In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section.
 
 ### Declaration ordering
 
