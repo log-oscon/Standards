@@ -532,7 +532,7 @@ These classes, given that their job is to force a given style over everything el
 
 #### Interaction Classes
 
-Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must never be styles**, they serve as bindings for JavaScript events and allow styles to be completely changed, including class names, without without any loss of functionality.
+Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must never be styled**, they serve as bindings for JavaScript events and allow styles to be completely changed, including class names, without without any loss of functionality.
 
 ```css
 /* NEVER DO THIS */
