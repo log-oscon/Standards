@@ -595,7 +595,15 @@ In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the 
 
 Each of these items should be separated from the next by an blank line.
 
-### Operators
+### Numbers
+
+In Sass, number is a data type including everything from unit-less numbers to lengths, durations, frequencies, angles and so on. This allows for complex calculations which may be very helpful, but as with any great power comes great danger.
+
+#### Units
+
+Given the mathematical powers of Sass units are not mere strings attached to a integer/float value, they are more like algebraic variables and will also suffer the mathematical operations.
+
+#### Calculations
 
 For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
 
@@ -624,6 +632,12 @@ While nesting is great, too much of it can make the code harder to read than pla
     * media queries
 
 * **Nesting can be used** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
+
+### Functions
+
+### Mixins
+
+### Definitions
 
 ### File structure
 
@@ -660,12 +674,6 @@ In most projects multiple Functions and Mixins will for sure exist. Considering 
 * `mixins/`: contains all of your Sass mixins.
 * `_variables.scss`: contains all of your global variables.
 * `main.scss`: used to import everything needed to generate the output CSS file.
-
-### Functions
-
-### Mixins
-
-### Definitions
 
 ## Resources
 
