@@ -488,7 +488,7 @@ block[--blockModName[-modVal]][__element[--elementModName[-modVal]]]
 *Note:* camelCase is used to avoid confusion in the representation of the string parts. Its use is not endorsed by this style guide.
 
 Rules for each part of the string:
-* `block` and `__element` - The name of the block and element, respectively. Can be a multiple word name with hyphens between words.
+* `block` and `__element` - The name of the block and element, respectively. Can be a double word name with hyphens between words.
 * `--blockModName` and `--elementModName` - Block and element boolean modifier name or modifier key, respectively. Must be a single word, no hyphens or underscores.
 * `-modVal` - Modifier's value in key-value format. Must be a single word, no hyphens or underscores.
 
@@ -601,11 +601,36 @@ In Sass, number is a data type including everything from unit-less numbers to le
 
 #### Units
 
-Given the mathematical powers of Sass units are not mere strings attached to a integer/float value, they are more like algebraic variables and will also suffer the mathematical operations.
+Given the mathematical powers of Sass, units are not mere strings attached to a integer/float value, they are more like algebraic variables and will also suffer mathematical operations.
+
+* Don't use units in intermediary calculations, this avoids any adverse outcomes in your results.
+* Don't print/use your final values by concatenating a string with the units, multiply by one unit of the units you'd like.
+
+```scss
+$value: 42;
+
+// Bad
+$length: $value + px;
+
+// Good
+$length: $value * 1px;
+```
+
+* Removing units is a simple task as well, you just need to divide by one unit. (This is just a note, your should never use units in intermediary calculations.)
+
+```scss
+$length: 42px;
+
+// Bad
+$value: str-slice($length + unquote(''), 1, 2);
+
+// Good
+$value: $length / 1px;
+```
 
 #### Calculations
 
-For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
+For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators. This also serves to force Sass to evaluate the contents of the parentheses.
 
 ```scss
 // Bad example
@@ -635,7 +660,16 @@ While nesting is great, too much of it can make the code harder to read than pla
 
 ### Functions
 
+When using functions the main problem is avoiding conflict with the default CSS functions and, given a complex project, navigating through our own functions.
+
+* All functions must start with a hyphen `-` prefixing their name: `-function`. This avoids any conflict with the default functions, in case we happen to need the same name (not advised).
+* Prefix the functions with a namespace: `-ns-function`; if the project grows to have more than a handful of functions or you absolutely need to use the same name as another CSS function (avoid this at all costs).
+* Functions should try to do only one thing.
+
 ### Mixins
+
+* Use mixins only when there are dynamic properties, otherwise prefer the use of `@extend` and placeholders.
+* Avoid using more than 4 parameters. It is a sign that a mixin is too complex.
 
 ### Definitions
 
