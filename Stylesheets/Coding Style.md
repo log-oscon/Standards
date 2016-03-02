@@ -234,6 +234,34 @@ input[type="checkbox"] {
 }
 ```
 
+* Pseudo-classes should be declared with a single colon.
+
+```css
+/* Bad */
+.selector::hover {
+    /* Declarations */
+}
+
+/* Good */
+.selector:hover {
+    /* Declarations */
+}
+```
+
+* Pseudo-elements should be declared with a double colon.
+
+```css
+/* Bad */
+.selector:before {
+    /* Declarations */
+}
+
+/* Good */
+.selector::before {
+    /* Declarations */
+}
+```
+
 ### Declarations
 
 * Write one declaration per line.
