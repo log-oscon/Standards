@@ -10,7 +10,7 @@ We mainly use Sass (written as SCSS) as a pre-processor to generate the final CS
     * [Declarations](#declarations)
     * [Vendor Prefixes](#vendor-prefixes)
     * [Media Queries](#media-queries)
-    * [Don't Use `@import](#dont-use-import)
+    * [Don't Use `@import`](#dont-use-import)
     * [Naming Classes](#naming-classes)
         * [State Classes](#state-classes)
         * [Interaction Classes](#interaction-classes)
