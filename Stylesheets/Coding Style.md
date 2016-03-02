@@ -560,7 +560,7 @@ Available selector variations:
 * `block--blockModName__element--elementMod-modVal` - The element with a key-value modifier inside a block with a boolean modifier.
 * `block--blockModName-modVal__element--elementMod-modVal` - The element inside the block, both with a key-value modifier.
 
-#### State classes
+#### State Classes
 
 A state is something that augments the current module e a very specific way, not necessarily in the properties it defines, but in the resulting output. Forms are a particular example where there will be state classes for sure. When a form field has errors or the field was filled successfully classes like `.is-success` or `.is-error` will bring styles to the element highlighting this state.
 
@@ -586,7 +586,7 @@ These classes, given that their job is to force a given style over everything el
 
 #### Interaction Classes
 
-Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must never be styled**, they serve as bindings for JavaScript events and allow styles to be completely changed, including class names, without without any loss of functionality.
+Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must never be styled**, they serve as bindings for JavaScript events and allow styles to be completely changed, including class names, without any loss of functionality.
 
 ```css
 /* NEVER DO THIS */
@@ -603,9 +603,9 @@ Class names starting with `js-` (e.g. `.js-search-toggle`). **These classes must
 
 These classes should be added according to the projects needs. **Strive to have zero helper classes**, they should be like a transient state of the code, something like a new modifier or state class.
 
-* The first character should always be a hyphen `-`.
+* They should always be prefixed with`h-`.
 * When naming, the property and its value should be explicit in the name.
-* The names should consist of a single word. Two words are accepted for variations of the same helper or to give more information (e.g. `.-text-blue`).
+* The names should consist of a single word. Two words are accepted for variations of the same helper or to give more information (e.g. `.h-text-blue`).
 * They should not declare more than a property.
 * They can be used interactively (added through JavaScript), although State Classes are preferable, or to extend/override an element's property in a situation where using a modifier seems excessive.
 * They should never be used where State Classes apply.
@@ -634,7 +634,7 @@ Never use it. We code mainly for WordPress, and there are many temptations to ov
 
 In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section.
 
-### Declaration ordering
+### Declaration Order
 
 1. `$variable` (local overrides or private)
 2. `@extend`
@@ -725,8 +725,6 @@ When using functions the main problem is avoiding conflict with the default CSS 
 * Use mixins only when there are dynamic properties, otherwise prefer the use of `@extend` and placeholders.
 * Avoid using more than 4 parameters. It is a sign that a mixin is too complex.
 
-### Definitions
-
 ### File structure
 
 * Each logical module of code should live in its own file. Avoiding multiple objects in the same file allows for the use of the filesystem as a means to navigate the styles rather than relying on comments.
@@ -739,7 +737,7 @@ When using functions the main problem is avoiding conflict with the default CSS 
 * All files should be partials, their name should start with an underscore `_`, except if the file is processed to a CSS file
 * If possible the files that generate the compiled CSS should never have anything other than `@import` statements and comments
 
-#### Folder structure
+#### Folder Structure
 
 In most projects multiple Functions and Mixins will for sure exist. Considering this, the following structure should be the backbone for any project:
 
