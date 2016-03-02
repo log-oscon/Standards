@@ -2,7 +2,33 @@
 
 We mainly use Sass (written as SCSS) as a pre-processor to generate the final CSS styles for each project. As a result, our CSS coding style mixes with the Sass and on the following document we try to give this distinction by pointing to what only applies to Sass (in general because it is invalid CSS).
 
-## General principles
+## Table of contents
+* [General Principles](#general-principles)
+* [CSS](#css)
+    * [Format](#format)
+    * [Selectors](#selectors)
+    * [Declarations](#declarations)
+    * [Vendor Prefixes](#vendor-prefixes)
+    * [Media Queries](#media-queries)
+    * [Don't Use `@import](#dont-use-import)
+    * [Naming Classes](#naming-classes)
+        * [State Classes](#state-classes)
+        * [Interaction Classes](#interaction-classes)
+        * [Helper Classes](#helper-classes)
+    * [Location-based Styling](#location-based-styling)
+* [SCSS](#scss)
+    * [Declaration Order](#declaration-order)
+    * [Numbers](#numbers)
+        * [Units](#units)
+        * [Calculations](#calculations)
+    * [Nesting](#nesting)
+    * [Functions](#functions)
+    * [Mixins](#mixins)
+    * [File Structure](#file-structure)
+        * [Folder Structure](#folder-structure)
+* [Resources](#resources)
+
+## General Principles
 
 If you follow nothing else at least don't forget these next few lines.
 
