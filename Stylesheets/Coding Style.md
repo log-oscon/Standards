@@ -479,6 +479,8 @@ width: 20px;
 
 Don't add any declarations with them, use something like [PostCSS' Autoprefixer](https://github.com/postcss/autoprefixer). This way you only have to worry about the support of a given property.
 
+The [Can I Use](http://caniuse.com) website should be your go to guide on how a property is supported. Because of its valuable information and the fact that Autoprefixer pull's its knowledge of properties from here as well.
+
 ### Media Queries
 
 All the `@media` rulesets should be placed after each rule with the declarations that override/extend that rule.
