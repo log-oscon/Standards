@@ -534,33 +534,133 @@ For more information, [read this article by Steve Souders](http://www.stevesoude
 
 ### Naming Classes
 
-We follow the general principles of [Block Element Modifier (BEM)](https://en.bem.info/) with our twist to make things fit our development needs. The selector types that we have are very similar to BEM, and we support both boolean modifiers and key-value modifiers.
-The main differences lay in the fact that we separate modifier names with a double hyphen (`--`) and modifier values with a single hyphen (`-`). Also, we don't use multiple word modifiers, either for their names or their values (in the key-value scenario).
+We follow the general principles of [Block Element Variation Modifier (BEVM)](https://www.viget.com/articles/bem-sass-modifiers) (which is in it self a different take on [Block Element Modifier (BEM)](https://en.bem.info/)).
 
-To define our BEM entities we use the following string format:
+We support both boolean modifiers and key-value modifiers. Also, we don't use multiple word modifiers, either for their names or their values.
+
+To define our BEVM entities we use the following string format:
 ```
-block[--blockModName[-modVal]][__element[--elementModName[-modVal]]]
+block[--variation][__element[--variation]] -modifier
 ```
-*Note:* camelCase is used to avoid confusion in the representation of the string parts. Its use is not endorsed by this style guide.
 
 Rules for each part of the string:
-* `block` and `__element` - The name of the block and element, respectively. Can be a double word name with hyphens between words.
-* `--blockModName` and `--elementModName` - Block and element boolean modifier name or modifier key, respectively. Must be a single word, no hyphens or underscores.
-* `-modVal` - Modifier's value in key-value format. Must be a single word, no hyphens or underscores.
+* `block` and `__element` - The name of the block and element, respectively. Can be a double word name with a hyphen separator.
+* `--variation` - Block and element variation identifier. Must be a single word.
+* `-modifier` - Modifier can be a single word, boolean modifier, or two words in a key-value style.
 
 Available selector variations:
 * `block` - The block.
-* `block--blockModName` - The block with a boolean modifier.
-* `block--blockModName-modVal` - The block with a key-value modifier.
+* `block--variation` - Variation of the block.
 * `block__element` - The element inside the block.
-* `block--blockModName__element` The element inside the block with a boolean modifier.
-* `block--blockModName-modVal__element` - The element inside the block with a key-value modifier.
-* `block__element--elementMod` - The element with a boolean modifier inside the block.
-* `block--blockModName__element--elementMod` - The element inside the block, both with a boolean modifier.
-* `block--blockModName-modVal__element--elementMod` - The element with a boolean modifier inside the block with a key-value modifier.
-* `block__element--elementMod-modVal` - The element with a key-value modifier inside the block.
-* `block--blockModName__element--elementMod-modVal` - The element with a key-value modifier inside a block with a boolean modifier.
-* `block--blockModName-modVal__element--elementMod-modVal` - The element inside the block, both with a key-value modifier.
+* `block--variation__element` The element inside the variation block.
+* `block__element--variation` - Variation of the element inside the block.
+* `block--variation__element--variation` - Variation of the element inside the variation of the block.
+* `-modifier` - A modifier to apply to any of the above selectors.
+
+#### Modifiers
+
+In this naming convention, modifiers are detached from the main selector so we don't get a very long and repetitive set of classes for a certain element.
+
+```html
+<!-- This BEM -->
+<button class="button button--success button-large button-block"></button>
+
+<!-- Becomes this -->
+<button class="button -success -large -block"></button>
+```
+
+However, modifiers must be styled attached to another selector and never as a first level selector. This allows for a modifier with the same name to do different things on different elements/blocks, without having to override any other properties.
+
+```scss
+// Bad
+.-modifier {
+    color: red;
+    font-size: 2em;
+}
+
+// Good
+.block__element.-modifier {
+    color: red;
+    font-size: 2em;
+}
+```
+
+#### Variations
+
+We should avoid the use of variation on small projects, opting for a modifier only approach. Also, even on big project the first modules should be constructed and extended/modified using modifiers, the use of variations should came later on to allow simpler selectors and rules when using modifiers will cause more confusion.
+
+As a guiding rule, if it makes your life simpler and the code more easy to read, use a variation.
+
+```scss
+// Example: buttons
+// Without variations
+.button {
+    background-color: white;
+    border-radius: 3px;
+    color: black;
+    padding: 10px;
+
+    .-success {
+        background-color: green;
+        color: white;
+    }
+
+    .-error {
+        background-color: red;
+        color: white;
+    }
+
+    .-primary {
+        background-color: blue;
+        color: white;
+    }
+}
+
+// With variations
+%.button-default {
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.button--success {
+    @extend button-default;
+    background: green;
+    color: white;
+}
+
+.button--error {
+    @extend button-default;
+    background: red;
+    color: white;
+}
+
+.button--primary {
+    @extend button-default;
+    background: blue;
+    color: white;
+}
+```
+
+```html
+<!--
+Example: Similar class names in child elements
+Without variations
+-->
+<div class="block">
+    <div class="element -highlight"></div>
+</div>
+<div class="block -highlight">
+    <div class="element -highlight"></div>
+</div>
+
+<!-- With variations -->
+<div class="block">
+    <div class="element -highlight"></div>
+</div>
+<div class="block--highlight">
+    <div class="element"></div>
+</div>
+```
 
 #### State Classes
 
