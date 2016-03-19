@@ -39,11 +39,19 @@ With a simple, but totally informative description of the content below.
 It may also contain notes and other types of relevant information.
 */
 
+.selector {
+    /* Declarations */
+}
+
 //
 // Heading Comment in SCSS
 //
 // With a simple, but totally informative description of the content below.
 // It may also contain notes and other types of relevant information.
+
+.selector {
+    // Declarations
+}
 ```
 
 ## Documentation
