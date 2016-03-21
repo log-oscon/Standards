@@ -729,12 +729,13 @@ These classes should be added according to the projects needs. **Strive to have 
 
 ### Location-based Styling
 
-Never use it. We code mainly for WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (post-type, single, front-page, home-page, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
-(Outside the WordPress environment the advice is the same!)
+Never use it. We code mainly for WordPress, and there are many temptations to override or extend a given class based on a specific class that WordPress attaches to a page (`.post-type`, `.single`, `.front-page`, `.home-page`, to name a few), but try not to. Add a modifier class to your block based on its location and apply your overrides/extensions to that class.
+
+***Note:*** Outside of the WordPress environment the advice is the same!
 
 ## SCSS
 
-In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section.
+In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the above and all that follows, should be taken into account. If the guideline seems duplicated follow the one from the SCSS section, for everything that's not mentioned fallback to the CSS guidelines.
 
 ### Declaration Order
 
@@ -742,22 +743,22 @@ In writing SCSS (where all files end with a **`.scss`** and not a `.sass`), the 
 2. `@extend`
 3. `@include`
 4. Regular declarations (allows for overriding)
-    5. Mixins with content blocks (`@media` declarations included here)
+5. Mixins with content blocks (`@media` declarations included here)
 6. Selectors that target itself:
-    1. pseudo-classes
-    2. pseudo-elements
-    3. component states
+    1. pseudo-classes (like `:hover` or `:first-child`)
+    2. pseudo-elements (like `::after` and `::before`)
+    3. component states (anything like `&.pretty-classname`)
 5. Nested declarations
 
-Each of these items should be separated from the next by an blank line.
+Each of these items should be separated from the next by a blank line.
 
 ### Numbers
 
-In Sass, number is a data type including everything from unit-less numbers to lengths, durations, frequencies, angles and so on. This allows for complex calculations which may be very helpful, but as with any great power comes great danger.
+In Sass, a number is a data type including everything from unit-less numbers to lengths, durations, frequencies, angles and so on. This allows for complex calculations which may be very helpful, but as with any great power comes great danger.
 
 #### Units
 
-Given the mathematical powers of Sass, units are not mere strings attached to a integer/float value, they are more like algebraic variables and will also suffer mathematical operations.
+Given the mathematical powers of Sass, units are not mere strings attached to an integer/float value, they are more like algebraic variables and will also suffer mathematical operations.
 
 * Don't use units in intermediary calculations, this avoids any adverse outcomes in your results.
 * Don't print/use your final values by concatenating a string with the units, multiply by one unit of the units you'd like.
@@ -772,7 +773,7 @@ $length: $value + px;
 $length: $value * 1px;
 ```
 
-* Removing units is a simple task as well, you just need to divide by one unit. (This is just a note, your should never use units in intermediary calculations.)
+* Removing units is a simple task as well, you just need to divide by one unit of the same type. (This is just an example, you should never use units in intermediary calculations.)
 
 ```scss
 $length: 42px;
@@ -812,7 +813,7 @@ While nesting is great, too much of it can make the code harder to read than pla
     * component states
     * media queries
 
-* **Nesting can be used** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss)
+* **Nesting can be used** on some coding styles like [RSCSS](https://github.com/rstacruz/rscss), and in our case we use nesting for [Modifiers](#modifiers) and [State Classes](#state-classes).
 
 ### Functions
 
