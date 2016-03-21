@@ -552,7 +552,7 @@ Available selector variations:
 * `block` - The block.
 * `block--variation` - Variation of the block.
 * `block__element` - The element inside the block.
-* `block--variation__element` The element inside the variation block.
+* `block--variation__element` The element inside the variation of the block.
 * `block__element--variation` - Variation of the element inside the block.
 * `block--variation__element--variation` - Variation of the element inside the variation of the block.
 * `-modifier` - A modifier to apply to any of the above selectors.
@@ -617,25 +617,25 @@ As a guiding rule, if it makes your life simpler and the code more easy to read,
 }
 
 // With variations
-%.button-default {
+%button-default {
     border-radius: 3px;
     padding: 10px;
 }
 
 .button--success {
-    @extend button-default;
+    @extend %button-default;
     background: green;
     color: white;
 }
 
 .button--error {
-    @extend button-default;
+    @extend %button-default;
     background: red;
     color: white;
 }
 
 .button--primary {
-    @extend button-default;
+    @extend %button-default;
     background: blue;
     color: white;
 }
