@@ -12,4 +12,4 @@ Contribuitons are most welcome in their natural form of Pull Requests, the follo
 * If it's something new, make sure it's not hidden somewhere in here already or that we didn't dismiss it for something else.
 * Make sure you supply some arguments for the benefits/advantages your change provides.
 
-**Special thanks to:** @goblindegook, @s3rgiosan and @xipasduarte.
+**Special thanks to:** [@goblindegook](https://github.com/goblindegook), [@s3rgiosan](https://github.com/s3rgiosan) and [@xipasduarte](https://github.com/xipasduarte).
