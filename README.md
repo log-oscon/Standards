@@ -14,7 +14,7 @@ It goes without saying, that you may use any part of this collection of document
 
 As we've said, most of what is here is not original. In every section you will find a list of sources that contributed to its final result. Some sources are also distributed along the documents for particular insight on a specific guideline.
 
-To all of these amazing people we say.
+To all of these amazing people we say:
 
     Thank You
 
