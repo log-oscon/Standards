@@ -866,8 +866,6 @@ In most projects multiple Functions and Mixins will for sure exist. Considering 
 
 ## Resources
 
-Most of what is here is not original – probably everything. We built this from analyzing and learning with others, below you will find our sources resources and other may appear along the document for a particular guideline. This document is our brand of [guidelines/rules of thumb/experience/magic dust] mixture and we'll evolve it along with our needs.
-
 * [WordPress CSS Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/)
 * [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [Principles for writing consistent, clean, friendly Sass](https://github.com/anthonyshort/idiomatic-sass)
