@@ -664,7 +664,7 @@ Without variations
 
 #### State Classes
 
-A state is something that augments the current module e a very specific way, not necessarily in the properties it defines, but in the resulting output. Forms are a particular example where there will be state classes for sure. When a form field has errors or the field was filled successfully classes like `.is-success` or `.is-error` will bring styles to the element highlighting this state.
+A state is something that augments the current module in a very specific way, not necessarily in the properties it defines, but in the resulting output. Forms are a particular example where there will be state classes for sure. When a form field has errors or the field was filled successfully classes like `.is-success` or `.is-error` will bring styles to the element highlighting this state.
 
 These classes, given that their job is to force a given style over everything else, may use `!important`, but only if there is no other way to be sure their styles will always override the ones from the element. When, using `!important`, there must be a comment stating the reason.
 
@@ -873,3 +873,4 @@ In most projects multiple Functions and Mixins will for sure exist. Considering 
 * [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
 * [BEM. Block Element Modifier](https://en.bem.info/)
 * [Sass Guidelines](http://sass-guidelin.es)
+* [Sassier (BE)Modifiers](https://www.viget.com/articles/bem-sass-modifiers)
