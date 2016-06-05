@@ -79,7 +79,6 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     }],
-    "rule-non-nested-empty-line-before": "always",
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/selector-no-redundant-nesting-selector": true,
     "selector-combinator-space-after": "always",
