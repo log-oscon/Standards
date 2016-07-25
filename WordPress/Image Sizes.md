@@ -40,7 +40,7 @@ A few guidelines on ratios:
 
 ### One fixed dimension 
 
-Sometimes images have a dimension that is set to an "absurd" value ir order to force a resize based on one dimension only. For these images the naming should be done using the information of that size and its orientation (`w` - for with, `h` - for height).
+Sometimes images have a dimension that is set to an "absurd" value ir order to force a resize based on one dimension only. For these images the naming should be done using the information of that size and its orientation (`w` - for width, `h` - for height).
 
 ```
 [qualitative-size]_[reference-dimension][orientation]
