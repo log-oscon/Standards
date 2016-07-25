@@ -38,6 +38,14 @@ A few guidelines on ratios:
 * Try to hit a nice round number to factorize, such as `4by3`, `16by9` and `21by9`.
 * If the image is square, declare it as `1by1`.
 
+### One fixed dimension 
+
+Sometimes images have a dimension that is set to an "absurd" value ir order to force a resize based on one dimension only. For these images the naming should be done using the information of that size and its orientation (`w` - for width, `h` - for height).
+
+```
+[qualitative-size]_[reference-dimension][orientation]
+```
+
 ### Examples
 
 ```php
@@ -46,8 +54,12 @@ A few guidelines on ratios:
  * https://developer.wordpress.org/reference/functions/add_image_size/
  */
 
+// Both sizes fixed.
 add_image_size( 'medium_4by3', 400, 300, true );
 add_image_size( 'medium_5by13', 500, 1300, true );
+
+// Based on one of the dimensions.
+add_image_size( 'large_1600w', 1600, 99999, false );
 ```
 
 ## General guidelines
