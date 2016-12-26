@@ -61,4 +61,4 @@ Classes used in a namespaced file should have a `use` statement at the top of th
 
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
-
+- [10up Engineering Best Practices - PHP] (https://10up.github.io/Engineering-Best-Practices/php/)
