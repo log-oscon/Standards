@@ -1,7 +1,5 @@
 # Coding Style
 
-Guidelines for writing modern (namespaced) PHP.
-
 Unless otherwise mentioned, we follow the [WordPress PHP Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) and [PSRs](http://www.php-fig.org/psr/).
 
 We also have our own standards for things that aren’t covered by the standards mentioned above, such as namespacing and general project structure.
