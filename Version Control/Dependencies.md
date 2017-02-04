@@ -22,8 +22,8 @@ Not all of the options are the same, but the possibilities are highlighted on se
 
 This is incredibly versatile and allows developers to do a lot of things. However, it can also become troublesome and "dangerous" really fast.
 
-History has shown us that, as your project grows (dependencies, people in contact with it, time lapsed since version 1.0, etc.) managing the dependencies and their impacts becomes a very sensitive issue. Also, we can't trust that the latest version of any dependency won't break our project.
-Because of this, and to give us more security when updating you should use a specific (strict) version for your dependencies.
+History has shown us that, as your project grows (dependencies, people in contact with it, time lapsed since version 1.0, etc.) managing dependencies and their impacts becomes a very sensitive issue. Also, we should never trust that the latest version of any dependency won't break our project.
+Because of this, and to give us more security when updating you should use a specific (strict) version for each one.
 
 ```
 require: {
@@ -31,4 +31,4 @@ require: {
 }
 ```
 
-This will make updating take a little bit longer, but you get the "forced" chance to review any changes to a dependency, test them, and finally push the updated version to be used.
+This will make updating a project a little bit longer, but you get the "forced" chance to review any changes to a dependency, test them, and finally push the updated version to be used.
