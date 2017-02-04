@@ -9,7 +9,7 @@ We also have our own standards for things that aren’t covered by the standards
 
 PHP files should **either** declare symbols (classes, functions, etc) **or** run code (function calls, etc), but not both.
 
-Classes should be in their own file, which should not declare any other functions or classes.
+Each class should be in its own file, which should not declare any other functions (outside the class scope) or classes.
 
 Generally, the file should follow the following order:
 
