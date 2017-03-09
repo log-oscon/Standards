@@ -1,3 +1,4 @@
 /.editorconfig
 /.codio
 /.gitignore
+/.travis.yml

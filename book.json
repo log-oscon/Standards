@@ -4,5 +4,6 @@
   "author": "Engenharia",
   "language": "en",
   "direction": "ltr",
-  "gitbook": ">=3.0.0"
+  "gitbook": ">=3.0.0",
+  "plugins": ["prism", "-highlight"]
 }
