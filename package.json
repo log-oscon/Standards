@@ -1,0 +1,25 @@
+{
+  "name": "standards",
+  "version": "1.0.0",
+  "description": "The coding standards used at log.",
+  "main": "",
+  "scripts": {
+    "install": "gitbook install",
+    "serve": "npm run install && gitbook serve",
+    "build": "npm run install && rm -rf _book && gitbook build",
+    "publish": "npm run build && cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add --all && git commit -m 'Update docs' && git push git@github.com:log-oscon/Standards gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/log-oscon/Standards.git"
+  },
+  "author": "Engenharia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/log-oscon/Standards/issues"
+  },
+  "homepage": "http://standards.log.pt",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}

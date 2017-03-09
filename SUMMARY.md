@@ -1,5 +1,7 @@
 # Summary
 
+* [Welcome](README.md)
+
 ## JavaScript
 
 * [Coding Style](JavaScript/Coding Style.md)
