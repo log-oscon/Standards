@@ -4,4 +4,10 @@ node_js:
 install:
   - npm install
 script:
+  - npm build
+  - npm run publish
+befor_deploy:
+  - git config --global user.email "engenharia@log.pt"
+  - git config --global user.name "Engenharia"
+deploy:
   - npm run publish
