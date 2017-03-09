@@ -1,12 +1,13 @@
 language: node_js
 node_js:
   - "6"
+branches:
+  only:
+    - master
 install:
   - npm install
-script:
-  - npm run build
-before_deploy:
+before_script:
   - git config --global user.email "engenharia@log.pt"
   - git config --global user.name "Engenharia"
-deploy:
+script:
   - npm run publish
