@@ -1,7 +1,7 @@
 # log's Standards
 
 Yes, we have those!
-This repository is the collection of all the standard practices we employ at our [*beloved company*](http://log.pt). It is a work in continuous progress and, hopefully, it will always be better yet never finished.
+This repository is the collection of all the standard practices we employ at our [*beloved company*](https://log.pt). It is a work in continuous progress and, hopefully, it will always be better yet never finished.
 This is our vision on things, and in all cases it is a mix of several sources and experience, which is itself a mix of other sources. Of the 0.001% of "originality" that you may find here, consider it our gift to you.
 
 We have a simple site in the hoven to make things more *pretty* and readable. But in the mean time feel free to browse the repository and read whatever you feel like.

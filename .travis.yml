@@ -1,13 +1,18 @@
 language: node_js
 node_js:
   - "6"
-branches:
-  only:
-    - master
 install:
   - npm install
 before_script:
   - git config --global user.email "engenharia@log.pt"
   - git config --global user.name "Engenharia"
 script:
-  - npm run publish
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir:
+    - _book
+  on:
+    branch: master
