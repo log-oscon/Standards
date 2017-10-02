@@ -84,19 +84,30 @@ $y = WP\Other::thing();
 Usage of quotation marks (double quotes) ir restricted to HTML attributes or when evaluating anything inside the string. Otherwise you should always use single quotes.
 
 ```php
-// No
+// No:
 echo "<a href='/static/link' title='Yeah yeah!'>Link name</a>";
 
-// Yes
+// Yes:
 echo '<a href="/static/link" title="Yeah yeah!">Link name</a>';
 
-// No
+// No:
 $option_block = \get_option( 'options_block' . $this->language );
 
-// Yes
+// Yes:
 $option_block = \get_option( "options_block{$this->language}" );
 ```
 
+
+## Indentation
+Your indentation should always reflect logical structure. Use **real tabs** and not spaces.
+
+Exception: if you have a block of code that would be more readable if things are aligned, use spaces:
+```php
+[tab]$foo   = 'somevalue';
+[tab]$foo2  = 'somevalue2';
+[tab]$foo34 = 'somevalue3';
+[tab]$foo5  = 'somevalue4';
+```
 
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
