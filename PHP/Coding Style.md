@@ -103,10 +103,10 @@ Your indentation should always reflect logical structure. Use **real tabs** and 
 
 Exception: if you have a block of code that would be more readable if things are aligned, use spaces:
 ```php
-[tab]$foo   = 'somevalue';
-[tab]$foo2  = 'somevalue2';
-[tab]$foo34 = 'somevalue3';
-[tab]$foo5  = 'somevalue4';
+$foo   = 'somevalue';
+$foo2  = 'somevalue2';
+$foo34 = 'somevalue3';
+$foo5  = 'somevalue4';
 ```
 
 ## References
