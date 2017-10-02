@@ -108,8 +108,41 @@ $foo2  = 'somevalue2';
 $foo34 = 'somevalue3';
 $foo5  = 'somevalue4';
 ```
+Note the comma after the last array item: this is recommended because it makes it easier to change the order of the array, and makes for cleaner diffs when new items are added.
+
+**Rule of thumb**: Tabs should be used at the beginning of the line for indentation, while spaces can be used mid-line for alignment.
 
 
+## Brace Style
+
+## Array Creation
+When creating a new array, prefer the old-style syntax `array()` over the short-array syntax `[]`.
+
+```php
+// No:
+get_posts( [
+	'author_in' => [ 1, 2, 3 ],
+	'meta_query' => [
+		'relation' => 'AND',
+		[
+			'key' => '_my_meta',
+			'value' => '1'
+		],
+	],
+] );
+
+// Yes:
+get_posts( array(
+	'author_in' => array( 1, 2, 3 ),
+	'meta_query' => array(
+		'relation' => 'AND',
+		array(
+			'key' => '_my_meta',
+			'value' => '1'
+		),
+	),
+) );
+```
 ## Associative Arrays
 For associative arrays, each item should start on a new line when the array contains more than one item:
 ```php
