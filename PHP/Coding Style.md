@@ -114,7 +114,19 @@ Note the comma after the last array item: this is recommended because it makes i
 
 
 ## Brace Style
+Braces shall be used for all blocks in the style shown here:
 
+```php
+if ( condition ) {
+    action1();
+    action2();
+} elseif ( condition2 && condition3 ) {
+    action3();
+    action4();
+} else {
+    defaultaction();
+}
+```
 ## Array Creation
 When creating a new array, prefer the old-style syntax `array()` over the short-array syntax `[]`.
 
@@ -143,6 +155,8 @@ get_posts( array(
 	),
 ) );
 ```
+
+
 ## Associative Arrays
 For associative arrays, each item should start on a new line when the array contains more than one item and each line should end with `,`
 
@@ -154,10 +168,12 @@ $query = new WP_Query( array(
 ) );
 ```
 
-## Visibility (Public/Protected/Private)
-Class methods and properties should always be marked with a visibility keyword, one of public, protected or private.
 
-A class that is not intended to be inherited should be made final (in Java). You might relax some access rules (private to protected, final to non-final) for the sake of unit-testing, but then document it, and make it clear that although the method is protected, it's not supposed to be overridden.
+## Visibility (Public/Protected/Private)
+Class methods and properties should always be marked with a visibility keyword, one of `public`, `protected` or `private`.
+
+A class that is not intended to be inherited should be made final. You might want to relax some access rules (private to protected, final to non-final) for the sake of unit-testing, but then document it, and make it clear that although the method is protected, it's not supposed to be overridden.
+
 
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
