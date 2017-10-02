@@ -42,7 +42,7 @@ As an example, for a plugin called “logoscon-foobar” with a namespace of `lo
 
 Namespaces should be logical groupings of related functionality. Typically, this means along feature lines, not along technology lines. 
 
-Namespaces and classes should be named with CamelCase [^1] (https://en.wikipedia.org/wiki/Camel_case). Avoid lowercase and the use of underscores.
+Namespaces and classes should be named with CamelCase [^1]. Avoid lowercase and the use of underscores.
 
 Reusable code should be prefixed with `logoscon\`. Project names starting with “logoscon-“ should be sub-namespaces of `logoscon\`: if the project is called “logoscon-foobar”, the namespace should be `logoscon\FooBar`.
 
@@ -62,3 +62,5 @@ Classes used in a namespaced file should have a `use` statement at the top of th
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP] (https://10up.github.io/Engineering-Best-Practices/php/)
+
+[1]:https://en.wikipedia.org/wiki/Camel_case
