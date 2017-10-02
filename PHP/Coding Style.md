@@ -80,6 +80,6 @@ $y = WP\Other::thing();
 
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
-- [10up Engineering Best Practices - PHP] (https://10up.github.io/Engineering-Best-Practices/php/)
+- [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
 
 [1]: https://en.wikipedia.org/wiki/Camel_case
