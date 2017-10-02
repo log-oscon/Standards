@@ -68,7 +68,7 @@ $x = Something::method();
 use AwesomeClient\WP;
 
 $x = Something::method();
-$y = Something\Other::thing();
+$y = WP\Other::thing();
 ```
 
 
