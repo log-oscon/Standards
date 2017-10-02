@@ -4,6 +4,8 @@ Unless otherwise mentioned, we follow the [WordPress PHP Coding Standards](https
 
 We also have our own standards for things that aren’t covered by the standards mentioned above, such as namespacing and general project structure.
 
+For ease of reference, the most important points of the previous standards are described here as well.
+
 
 ## File Layout
 
@@ -76,6 +78,24 @@ $y = WP\Other::thing();
 > Yoda conditions are dumb and solve the wrong problem. You have my permission to **not** use Yoda conditions.
 > 
 > by Ryan McCue
+
+
+## Single and Double Quotes
+Usage of quotation marks (double quotes) ir restricted to HTML attributes or when evaluating anything inside the string. Otherwise you should always use single quotes.
+
+```php
+// No
+echo "<a href='/static/link' title='Yeah yeah!'>Link name</a>";
+
+// Yes
+echo '<a href="/static/link" title="Yeah yeah!">Link name</a>';
+
+// No
+$option_block = \get_option( 'options_block' . $this->language );
+
+// Yes
+$option_block = \get_option( "options_block{$this->language}" );
+```
 
 
 ## References
