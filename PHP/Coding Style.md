@@ -109,6 +109,16 @@ $foo34 = 'somevalue3';
 $foo5  = 'somevalue4';
 ```
 
+
+## Associative Arrays
+For associative arrays, each item should start on a new line when the array contains more than one item:
+```php
+$query = new WP_Query( array( 
+    'post_type'   => 'page',
+    'post_author' => 123,
+    'post_status' => 'publish',
+) );
+```
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
