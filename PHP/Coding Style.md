@@ -73,7 +73,7 @@ $y = WP\Other::thing();
 
 
 ## Yoda Conditions
-> Yoda conditions are dumb and solve the wrong problem. You have my permission to not use Yoda conditions.
+> Yoda conditions are dumb and solve the wrong problem. You have my permission to **not** use Yoda conditions.
 > 
 > by Ryan McCue
 
