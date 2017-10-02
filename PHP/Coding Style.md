@@ -42,7 +42,7 @@ As an example, for a plugin called “logoscon-foobar” with a namespace of `lo
 
 Namespaces should be logical groupings of related functionality. Typically, this means along feature lines, not along technology lines. 
 
-Namespaces and classes should be named with CamelCase [^1][1]. Avoid lowercase and the use of underscores.
+Namespaces and classes should be named with [CamelCase][1]. Avoid lowercase and the use of underscores.
 
 Reusable code should be prefixed with `logoscon\`. Project names starting with “logoscon-“ should be sub-namespaces of `logoscon\`: if the project is called “logoscon-foobar”, the namespace should be `logoscon\FooBar`.
 
