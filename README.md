@@ -1,8 +1,10 @@
 # log's Standards
 
 Yes, we have those!
-This repository is the collection of all the standard practices we employ at our [*beloved company*](https://log.pt). It is a work in continuous progress and, hopefully, it will always be better yet never finished.
+This repository is the collection of all the standard practices we employ at [*log*](https://log.pt). It is a work in continuous progress and, hopefully, it will always be better yet never finished.
 This is our vision on things, and in all cases it is a mix of several sources and experience, which is itself a mix of other sources. Of the 0.001% of "originality" that you may find here, consider it our gift to you.
+
+Although we do not pretend to teach anyone, a Loguiano should follow these best practices in every code he/she builds so as to improve efficiency within the team.
 
 We have a simple site in the hoven to make things more *pretty* and readable. But in the mean time feel free to browse the repository and read whatever you feel like.
 
@@ -24,4 +26,4 @@ Contribuitons are most welcome in their natural form of Pull Requests, the follo
 * If it's something new, make sure it's not hidden somewhere in here already or that we didn't dismiss it for something else.
 * Make sure you supply some arguments for the benefits/advantages your change provides.
 
-**Special thanks to:** [@goblindegook](https://github.com/goblindegook), [@s3rgiosan](https://github.com/s3rgiosan) and [@xipasduarte](https://github.com/xipasduarte).
+**Special thanks to:** [@goblindegook](https://github.com/goblindegook), [@s3rgiosan](https://github.com/s3rgiosan), [@xipasduarte](https://github.com/xipasduarte) and  [@RicCastelhano](https://github.com/RicCastelhano).
