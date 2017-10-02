@@ -144,7 +144,8 @@ get_posts( array(
 ) );
 ```
 ## Associative Arrays
-For associative arrays, each item should start on a new line when the array contains more than one item:
+For associative arrays, each item should start on a new line when the array contains more than one item and each line should end with `,`
+
 ```php
 $query = new WP_Query( array( 
     'post_type'   => 'page',
@@ -152,6 +153,12 @@ $query = new WP_Query( array(
     'post_status' => 'publish',
 ) );
 ```
+
+## Visibility (Public/Protected/Private)
+Class methods and properties should always be marked with a visibility keyword, one of public, protected or private.
+
+A class that is not intended to be inherited should be made final (in Java). You might relax some access rules (private to protected, final to non-final) for the sake of unit-testing, but then document it, and make it clear that although the method is protected, it's not supposed to be overridden.
+
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
