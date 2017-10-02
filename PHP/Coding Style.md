@@ -52,6 +52,25 @@ Classes used in a namespaced file should have a `use` statement at the top of th
 
 `use` statements should never start with a `\`; these are not required, as the namespaces here are already absolute.
 
+```php
+// No:
+$x = \AwesomeClient\WP\Something::method();
+
+// No:
+use \AwesomeClient\WP\Something;
+$x = Thing::method();
+
+// Yes:
+use AwesomeClient\WP\Something;
+$x = Something::method();
+
+// Allowed:
+use AwesomeClient\WP;
+
+$x = Something::method();
+$y = Something\Other::thing();
+```
+
 
 ## Yoda Conditions
 > Yoda conditions are dumb and solve the wrong problem. You have my permission to not use Yoda conditions.
