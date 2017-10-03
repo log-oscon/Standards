@@ -1,6 +1,6 @@
 # Security
 
-Unless otherwise mentioned, we follow the [Hardening WordPress Principles](https://codex.wordpress.org/Hardening_WordPress), the [Plugin Security Guidelines](https://developer.wordpress.org/plugins/security/) and the [Theme Security Guidelines](https://developer.wordpress.org/themes/theme-security/).
+Unless otherwise mentioned, we follow the [Hardening WordPress Principles](https://codex.wordpress.org/Hardening_WordPress), with the [Plugin Security Guidelines](https://developer.wordpress.org/plugins/security/) and the [Theme Security Guidelines](https://developer.wordpress.org/themes/theme-security/).
 
 
 For ease of reference, the most important points of the previous standards are described here as well.
@@ -15,8 +15,8 @@ Usually this applies to data coming from external sources such as user input and
 
 Simple examples of data validation:
 
--Check that required fields have not been left blank
--Check that an entered phone number only contains numbers and punctuation
--Check that an entered postal code is a valid postal code
--Check that a quantity field is greater than 0
--Data validation should be performed as early as possible. That means validating the data before performing any actions.
+- Check that required fields have not been left blank
+- Check that an entered phone number only contains numbers and punctuation
+- Check that an entered postal code is a valid postal code
+- Check that a quantity field is greater than 0
+- Data validation should be performed as early as possible. That means validating the data before performing any actions.
