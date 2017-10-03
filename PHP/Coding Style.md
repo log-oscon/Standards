@@ -245,6 +245,20 @@ A class that is not intended to be inherited should be made final. You might wan
 When formatting SQL statements you may break it into several lines and indent if it is sufficiently complex. Always capitalize the SQL parts of the statement like `UPDATE` or `WHERE`.
 
 
+## Clever Code
+In general, readability is more important than cleverness or brevity.
+
+```php
+// No:
+isset( $var ) || $var = some_function();
+
+// Yes:
+if ( ! isset( $var ) ) {
+    $var = some_function();
+}
+```
+
+
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
