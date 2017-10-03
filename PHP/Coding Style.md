@@ -7,6 +7,10 @@ We also have our own standards for things that aren’t covered by the standards
 For ease of reference, the most important points of the previous standards are described here as well.
 
 
+## Language
+All code and documentation **must be written in english**.
+
+
 ## File Layout
 
 PHP files should **either** declare symbols (classes, functions, etc) **or** run code (function calls, etc), but not both.
