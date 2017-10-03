@@ -75,7 +75,7 @@ $y = WP\Other::thing();
 
 
 ## Properties and Methods Naming
-Properties, Methods and Action/Filter hooks should be named with [snake_case][2]. Don’t abbreviate variable and function names unnecessarily; let the code be unambiguous and self-documenting.
+Properties, Methods and Action/Filter hooks should be named with [snake_case][2]. Don’t abbreviate variable and function names unnecessarily, let the code be unambiguous and self-documenting.
 
 
 ## Yoda Conditions
