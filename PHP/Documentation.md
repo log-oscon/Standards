@@ -14,7 +14,7 @@ All documentation **must be written in english**.
 /**
  * Class description.
  *
- * @since x.y.y
+ * @since x.y.z
  * @package ClientName
  * @author log.OSCON, Lda. <engenharia@log.pt>
  */
@@ -27,7 +27,19 @@ All documentation **must be written in english**.
 /**
  * Variable or Constant description.
  *
- * @since 1.0.0
+ * @since x.y.z
  * @var   (type)
  */
+```
+
+
+## Methods
+```php
+/**
+ * Method description.
+ *
+ * @since  x.y.z
+ * @param  (type)  $param_name  Parameter description.
+ * @return (type)               Return value description.
+*/
 ```
