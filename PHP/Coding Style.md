@@ -127,6 +127,68 @@ if ( condition ) {
     defaultaction();
 }
 ```
+
+
+## Space Usage
+Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators.
+
+```php
+$x == 23
+foo && bar
+! foo
+array( 1, 2, 3 )
+$baz . '-5'
+$term .= 'X'
+```
+Put spaces on both sides of the opening and closing parenthesis of `if`, `elseif`, `foreach`, `for`, and `switch` blocks:
+```php
+foreach ( $foo as $bar ) { ...
+```
+When defining a function, do it like so:
+```php
+function my_function( $param1 = 'foo', $param2 = 'bar' ) { ...
+```
+When calling a function, do it like so:
+```php
+my_function( $param1, func_param( $param2 ) );
+```
+When performing logical comparisons, do it like so:
+```php
+if ( ! $foo ) { ...
+```
+When type casting, do it like so:
+```php
+foreach ( (array) $foo as $bar ) { ...
+ 
+$foo = (boolean) $bar;
+```
+When referring to array items, only include a space around the index if it is a variable, for example:
+
+```php
+$x = $foo['bar']; // correct
+$x = $foo[ 'bar' ]; // incorrect
+ 
+$x = $foo[0]; // correct
+$x = $foo[ 0 ]; // incorrect
+ 
+$x = $foo[ $bar ]; // correct
+$x = $foo[$bar]; // incorrect
+```
+In a switch block, there must be no space before the colon for a case statement:
+```php
+switch ( $foo ) {
+    case 'bar': // correct
+    case 'ba' : // incorrect
+}
+```
+Similarly, there should be no space before the colon on return type declarations:
+```php
+function sum( $a, $b ): float {
+    return $a + $b;
+}
+```
+
+
 ## Array Creation
 When creating a new array, prefer the old-style syntax `array()` over the short-array syntax `[]`.
 
