@@ -74,6 +74,10 @@ $y = WP\Other::thing();
 ```
 
 
+## Properties and Methods Naming
+Properties, Methods and Action/Filter hooks should be named with [snake_case][2]. Don’t abbreviate variable and function names unnecessarily; let the code be unambiguous and self-documenting.
+
+
 ## Yoda Conditions
 > Yoda conditions are dumb and solve the wrong problem. You have my permission to **not** use Yoda conditions.
 > 
@@ -240,8 +244,10 @@ A class that is not intended to be inherited should be made final. You might wan
 ## Formatting SQL statements
 When formatting SQL statements you may break it into several lines and indent if it is sufficiently complex. Always capitalize the SQL parts of the statement like `UPDATE` or `WHERE`.
 
+
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
 
 [1]: https://en.wikipedia.org/wiki/Camel_case
+[2]: https://en.wikipedia.org/wiki/Snake_case
