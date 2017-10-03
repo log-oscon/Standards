@@ -8,7 +8,7 @@ For ease of reference, the most important points of the previous standards are d
 
 
 ## Language
-All code and documentation **must be written in english**.
+All code **must be written in english**.
 
 
 ## File Layout
