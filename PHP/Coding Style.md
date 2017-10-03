@@ -237,6 +237,9 @@ Class methods and properties should always be marked with a visibility keyword, 
 A class that is not intended to be inherited should be made final. You might want to relax some access rules (private to protected, final to non-final) for the sake of unit-testing, but then document it, and make it clear that although the method is protected, it's not supposed to be overridden.
 
 
+## Formatting SQL statements
+When formatting SQL statements you may break it into several lines and indent if it is sufficiently complex. Always capitalize the SQL parts of the statement like `UPDATE` or `WHERE`.
+
 ## References
 - [Human Made - PHP Style Guide](http://engineering.hmn.md/how-we-work/style/php/)
 - [10up Engineering Best Practices - PHP](https://10up.github.io/Engineering-Best-Practices/php/)
