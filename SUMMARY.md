@@ -10,8 +10,8 @@
 
 * [Coding Style](PHP/Coding Style.md)
 * [Design Patterns](PHP/Design Patterns.md)
-* [Security](PHP/Security.md)
 * [Documentation](PHP/Documentation.md)
+* [Security](PHP/Security.md)
 
 ## Stylesheets
 
