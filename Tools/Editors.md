@@ -4,6 +4,20 @@ We don't prescribe an IDE or text editor at log, developers are welcome to use w
 
 However, if you _do_ use any of the editors below (which we recommend, because they're awesome), then you are encouraged to install a few extensions to make your life easier and integrate with our tools and processes.
 
+### [Visual Studio Code](https://code.visualstudio.com/)
+
+VS Code is a free, open source project by Microsoft. It runs everywhere. Its functionality is extendable with plugins.
+
+If VS Code is your editor of choice, then we recommend the following extensions:
+
+* [Align](https://marketplace.visualstudio.com/items?itemName=steve8708.Align)
+* [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+* [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
+* [PHP DocBlocker](https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker)
+* [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+
+
 ### [Sublime Text](http://www.sublimetext.com/)
 
 Sublime Text is a cross-platform text and source code editor, with a Python application programming interface (API). Sublime Text is proprietary software. Its functionality is extendable with plugins. Most of the extending packages have free-software licenses and are community-built and maintained. Sublime Text lacks graphical setting dialogues and is entirely configured by editing text files.
