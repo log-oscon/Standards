@@ -7,8 +7,29 @@ For ease of reference, the most important points of the previous standards are d
 ## Language
 All documentation **must be written in english**.
 
+## General
+DocBlocks should directly precede the hook, action, function, method or class line. There should not be any opening/closing tags or other things between the DocBlock and the declarations.
 
-## Classes
+
+## Description (short and long descriptions)
+HTML markup should never be used outside of code examples, though Markdown can be used.
+
+All descriptions should be **clear, simple and brief**. Avoid describing *why* an element exists, rather, focus on documenting *what* and *when* it does something.
+
+All sentences should end with a full stop symbol.
+
+Always conjugate verbs in the singular third-person.
+
+```php
+// Yes.
+(it) Does something.
+
+// No.
+(it) Do something.
+```
+
+
+## Examples
 
 ```php
 /**
@@ -18,23 +39,14 @@ All documentation **must be written in english**.
  * @package ClientName
  * @author log.OSCON, Lda. <engenharia@log.pt>
  */
-```
 
-
- ## Variables and Constants
-
-```php
 /**
  * Variable or Constant description.
  *
  * @since x.y.z
  * @var   (type)
  */
-```
 
-
-## Methods
-```php
 /**
  * Method description.
  *
@@ -43,3 +55,4 @@ All documentation **must be written in english**.
  * @return (type)               Return value description.
 */
 ```
+
