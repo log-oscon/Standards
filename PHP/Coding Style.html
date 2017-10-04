@@ -1,0 +1,712 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Coding Style · log's Standards</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Engenharia">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Dependencies.html" />
+    
+    
+    <link rel="prev" href="../JavaScript/Coding Style.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Welcome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../JavaScript/Coding Style.html">
+            
+                <a href="../JavaScript/Coding Style.html">
+            
+                    
+                    Coding Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">PHP</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="Coding Style.html">
+            
+                <a href="Coding Style.html">
+            
+                    
+                    Coding Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Dependencies.html">
+            
+                <a href="Dependencies.html">
+            
+                    
+                    Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="Design Patterns.html">
+            
+                <a href="Design Patterns.html">
+            
+                    
+                    Design Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Documentation.html">
+            
+                <a href="Documentation.html">
+            
+                    
+                    Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="Security.html">
+            
+                <a href="Security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Unit Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Project Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Project Structure/WordPress Plugins.html">
+            
+                <a href="../Project Structure/WordPress Plugins.html">
+            
+                    
+                    WordPress Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../Project Structure/WordPress Sites.html">
+            
+                <a href="../Project Structure/WordPress Sites.html">
+            
+                    
+                    WordPress Sites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Project Structure/WordPress Themes.html">
+            
+                <a href="../Project Structure/WordPress Themes.html">
+            
+                    
+                    WordPress Themes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Stylesheets</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Stylesheets/Coding Style.html">
+            
+                <a href="../Stylesheets/Coding Style.html">
+            
+                    
+                    Coding Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../Stylesheets/Documentation.html">
+            
+                <a href="../Stylesheets/Documentation.html">
+            
+                    
+                    Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tools</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Tools/Editors.html">
+            
+                <a href="../Tools/Editors.html">
+            
+                    
+                    Editors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Tools/Version Control.html">
+            
+                <a href="../Tools/Version Control.html">
+            
+                    
+                    Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Version Control</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Version Control/Dependencies.html">
+            
+                <a href="../Version Control/Dependencies.html">
+            
+                    
+                    Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../Version Control/Naming.html">
+            
+                <a href="../Version Control/Naming.html">
+            
+                    
+                    Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../Version Control/Workflows.html">
+            
+                <a href="../Version Control/Workflows.html">
+            
+                    
+                    Workflows
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">WordPress</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../WordPress/Image Sizes.html">
+            
+                <a href="../WordPress/Image Sizes.html">
+            
+                    
+                    Image Sizes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Coding Style</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="coding-style">Coding Style</h1>
+<p>Unless otherwise mentioned, we follow the <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/" target="_blank">WordPress PHP Coding Standards</a> and <a href="http://www.php-fig.org/psr/" target="_blank">PSRs</a>.</p>
+<p>Add this <a href="https://github.com/log-oscon/Standards/blob/master/PHP/phpcs.ruleset.xml" target="_blank">PHPCS ruleset file</a> to your project.</p>
+<p>We also have our own standards for things that aren&#x2019;t covered by the standards mentioned above, such as namespacing and general project structure.</p>
+<p>For ease of reference, the most important points of the previous standards are described here as well.</p>
+<h2 id="language">Language</h2>
+<p>All code <strong>must be written in english</strong>.</p>
+<h2 id="file-layout">File Layout</h2>
+<p>PHP files should <strong>either</strong> declare symbols (classes, functions, etc) <strong>or</strong> run code (function calls, etc), but not both.</p>
+<p>Each class should be in its own file, which should not declare any other functions (outside the class scope) or classes.</p>
+<p>Generally, the file should follow the following order:</p>
+<ul>
+<li><code>namespace</code> declaration</li>
+<li><code>use</code> declarations</li>
+<li><code>const</code> declarations</li>
+<li><code>require</code> when allowed</li>
+<li>Declarations or run code</li>
+</ul>
+<h2 id="file-naming">File Naming</h2>
+<p>Namespaces are mapped to filesystem directories after lowercasing. Part of the namespace may be excluded from the directory structure, ala PSR-4. For example, a class with the namespace <code>logoscon\WP\Plugin\Example</code> could live in the <code>lib/</code> directory without the <code>logoscon\WP\Plugin</code> part.</p>
+<p>Contrary to the WordPress coding standards we do not name our classes like <code>class-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>classname</span><span class="token punctuation">&gt;</span></span>.php</code>. </p>
+<p>The main file for plugins should live in <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin-slug</span><span class="token punctuation">&gt;</span></span>.php</code> (typically, the folder name) in the plugin&#x2019;s directory, while the main file for themes is <code>functions.php</code> in the theme directory. This file should be the only one to contain run code. This file should also register necessary autoloaders.</p>
+<p>Underneath the top-level directory (either the plugin directory or the theme directory) should be a <code>lib</code> directory which represents the top-level namespace for the plugin/theme.</p>
+<p>As an example, for a plugin called &#x201C;logoscon-foobar&#x201D; with a namespace of <code>logoscon\WP\Plugin\FooBar</code>, the directory structure should look like this:</p>
+<ul>
+<li><code>logoscon-foobar.php</code> </li>
+<li><code>lib/</code> - Contains PHP code for <code>logoscon\WP\Plugin\FooBar</code> namespace<ul>
+<li><code>Plugin.php</code> - Defines the core plugin class</li>
+<li><code>I18n.php</code> - Define the internationalization functionality</li>
+</ul>
+</li>
+</ul>
+<h2 id="namespace-and-class-naming">Namespace and Class Naming</h2>
+<p>Namespaces should be logical groupings of related functionality. Typically, this means along feature lines, not along technology lines. </p>
+<p>Namespaces and classes should be named with <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">CamelCase</a>. Avoid lowercase and the use of underscores.</p>
+<p>Reusable code should be prefixed with <code>logoscon\</code>. Project names starting with &#x201C;logoscon-&#x201C; should be sub-namespaces of <code>logoscon\</code>: if the project is called &#x201C;logoscon-foobar&#x201D;, the namespace should be <code>logoscon\FooBar</code>.</p>
+<p>Client projects or products should generally use their own namespace (e.g. <code>AwesomeClient\</code>) rather than under the <code>logoscon</code> namespace.</p>
+<p>Classes used in a namespaced file should have a <code>use</code> statement at the top of the file to allow a quick overview of what is used, and to avoid long absolute references to the classes throughout the file. If you have a lot of functionality from given namespace, you can <code>use</code> the entire namespace to avoid excessive <code>use</code> statements.</p>
+<p><code>use</code> statements should never start with a <code>\</code>; these are not required, as the namespaces here are already absolute.</p>
+<pre class="language-"><code class="lang-php"><span class="token comment" spellcheck="true">// No:</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> \<span class="token package">AwesomeClient<span class="token punctuation">\</span>WP<span class="token punctuation">\</span>Something</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// No:</span>
+<span class="token keyword">use</span> <span class="token package"><span class="token punctuation">\</span>AwesomeClient<span class="token punctuation">\</span>WP<span class="token punctuation">\</span>Something</span><span class="token punctuation">;</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> Thing<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Yes:</span>
+<span class="token keyword">use</span> <span class="token package">AwesomeClient<span class="token punctuation">\</span>WP<span class="token punctuation">\</span>Something</span><span class="token punctuation">;</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> Something<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Allowed:</span>
+<span class="token keyword">use</span> <span class="token package">AwesomeClient<span class="token punctuation">\</span>WP</span><span class="token punctuation">;</span>
+
+<span class="token variable">$x</span> <span class="token operator">=</span> Something<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$y</span> <span class="token operator">=</span> <span class="token constant">WP</span>\<span class="token package">Other</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">thing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="properties-and-methods-naming">Properties and Methods Naming</h2>
+<p>Properties, Methods and Action/Filter hooks should be named with <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a>. Don&#x2019;t abbreviate variable and function names unnecessarily, let the code be unambiguous and self-documenting.</p>
+<h2 id="yoda-conditions">Yoda Conditions</h2>
+<blockquote>
+<p>Yoda conditions are dumb and solve the wrong problem. You have my permission to <strong>not</strong> use Yoda conditions.</p>
+<p>by Ryan McCue</p>
+</blockquote>
+<h2 id="single-and-double-quotes">Single and Double Quotes</h2>
+<p>Usage of quotation marks (double quotes) ir restricted to HTML attributes or when evaluating anything inside the string. Otherwise you should always use single quotes.</p>
+<pre class="language-"><code class="lang-php"><span class="token comment" spellcheck="true">// No:</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;&lt;a href=&apos;/static/link&apos; title=&apos;Yeah yeah!&apos;&gt;Link name&lt;/a&gt;&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Yes:</span>
+<span class="token keyword">echo</span> <span class="token string">&apos;&lt;a href=&quot;/static/link&quot; title=&quot;Yeah yeah!&quot;&gt;Link name&lt;/a&gt;&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// No:</span>
+<span class="token variable">$option_block</span> <span class="token operator">=</span> \<span class="token package">get_option</span><span class="token punctuation">(</span> <span class="token string">&apos;options_block&apos;</span> <span class="token punctuation">.</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">language</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Yes:</span>
+<span class="token variable">$option_block</span> <span class="token operator">=</span> \<span class="token package">get_option</span><span class="token punctuation">(</span> <span class="token string">&quot;options_block{$this-&gt;language}&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="indentation">Indentation</h2>
+<p>Your indentation should always reflect logical structure. Use <strong>real tabs</strong> and not spaces.</p>
+<p>Exception: if you have a block of code that would be more readable if things are aligned, use spaces:</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$foo</span>   <span class="token operator">=</span> <span class="token string">&apos;somevalue&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$foo2</span>  <span class="token operator">=</span> <span class="token string">&apos;somevalue2&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$foo34</span> <span class="token operator">=</span> <span class="token string">&apos;somevalue3&apos;</span><span class="token punctuation">;</span>
+<span class="token variable">$foo5</span>  <span class="token operator">=</span> <span class="token string">&apos;somevalue4&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note the comma after the last array item: this is recommended because it makes it easier to change the order of the array, and makes for cleaner diffs when new items are added.</p>
+<p><strong>Rule of thumb</strong>: Tabs should be used at the beginning of the line for indentation, while spaces can be used mid-line for alignment.</p>
+<h2 id="brace-style">Brace Style</h2>
+<p>Braces shall be used for all blocks in the style shown here:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">if</span> <span class="token punctuation">(</span> condition <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">action1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">action2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">elseif</span> <span class="token punctuation">(</span> condition2 <span class="token operator">&amp;&amp;</span> condition3 <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">action3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">action4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">defaultaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="space-usage">Space Usage</h2>
+<p>Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators.</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$x</span> <span class="token operator">==</span> <span class="token number">23</span>
+foo <span class="token operator">&amp;&amp;</span> bar
+<span class="token operator">!</span> foo
+<span class="token keyword">array</span><span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">)</span>
+<span class="token variable">$baz</span> <span class="token punctuation">.</span> <span class="token string">&apos;-5&apos;</span>
+<span class="token variable">$term</span> <span class="token punctuation">.</span><span class="token operator">=</span> <span class="token string">&apos;X&apos;</span>
+</code></pre>
+<p>Put spaces on both sides of the opening and closing parenthesis of <code>if</code>, <code>elseif</code>, <code>foreach</code>, <code>for</code>, and <code>switch</code> blocks:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">foreach</span> <span class="token punctuation">(</span> <span class="token variable">$foo</span> <span class="token keyword">as</span> <span class="token variable">$bar</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>When defining a function, do it like so:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">function</span> <span class="token function">my_function</span><span class="token punctuation">(</span> <span class="token variable">$param1</span> <span class="token operator">=</span> <span class="token string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token variable">$param2</span> <span class="token operator">=</span> <span class="token string">&apos;bar&apos;</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>When calling a function, do it like so:</p>
+<pre class="language-"><code class="lang-php"><span class="token function">my_function</span><span class="token punctuation">(</span> <span class="token variable">$param1</span><span class="token punctuation">,</span> <span class="token function">func_param</span><span class="token punctuation">(</span> <span class="token variable">$param2</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>When performing logical comparisons, do it like so:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span> <span class="token variable">$foo</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>When type casting, do it like so:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">foreach</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword">array</span><span class="token punctuation">)</span> <span class="token variable">$foo</span> <span class="token keyword">as</span> <span class="token variable">$bar</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token punctuation">(</span>boolean<span class="token punctuation">)</span> <span class="token variable">$bar</span><span class="token punctuation">;</span>
+</code></pre>
+<p>When referring to array items, only include a space around the index if it is a variable, for example:</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span><span class="token string">&apos;bar&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// correct</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span> <span class="token string">&apos;bar&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// incorrect</span>
+
+<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// correct</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// incorrect</span>
+
+<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span> <span class="token variable">$bar</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// correct</span>
+<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">[</span><span class="token variable">$bar</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// incorrect</span>
+</code></pre>
+<p>In a switch block, there must be no space before the colon for a case statement:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">switch</span> <span class="token punctuation">(</span> <span class="token variable">$foo</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">// correct</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;ba&apos;</span> <span class="token punctuation">:</span> <span class="token comment" spellcheck="true">// incorrect</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Similarly, there should be no space before the colon on return type declarations:</p>
+<pre class="language-"><code class="lang-php"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span> <span class="token variable">$a</span><span class="token punctuation">,</span> <span class="token variable">$b</span> <span class="token punctuation">)</span><span class="token punctuation">:</span> float <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$a</span> <span class="token operator">+</span> <span class="token variable">$b</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="array-creation">Array Creation</h2>
+<p>When creating a new array, prefer the old-style syntax <code>array()</code> over the short-array syntax <code>[]</code>.</p>
+<pre class="language-"><code class="lang-php"><span class="token comment" spellcheck="true">// No:</span>
+<span class="token function">get_posts</span><span class="token punctuation">(</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;author_in&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;meta_query&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token string">&apos;relation&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;AND&apos;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span>
+            <span class="token string">&apos;key&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;_my_meta&apos;</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;value&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;1&apos;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Yes:</span>
+<span class="token function">get_posts</span><span class="token punctuation">(</span> <span class="token keyword">array</span><span class="token punctuation">(</span>
+    <span class="token string">&apos;author_in&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">array</span><span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;meta_query&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">array</span><span class="token punctuation">(</span>
+        <span class="token string">&apos;relation&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;AND&apos;</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span>
+            <span class="token string">&apos;key&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;_my_meta&apos;</span><span class="token punctuation">,</span>
+            <span class="token string">&apos;value&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;1&apos;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="associative-arrays">Associative Arrays</h2>
+<p>For associative arrays, each item should start on a new line when the array contains more than one item and each line should end with <code>,</code></p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$query</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WP_Query</span><span class="token punctuation">(</span> <span class="token keyword">array</span><span class="token punctuation">(</span> 
+    <span class="token string">&apos;post_type&apos;</span>   <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;page&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;post_author&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">123</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;post_status&apos;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&apos;publish&apos;</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="visibility-publicprotectedprivate">Visibility (Public/Protected/Private)</h2>
+<p>Class methods and properties should always be marked with a visibility keyword, one of <code>public</code>, <code>protected</code> or <code>private</code>.</p>
+<p>A class that is not intended to be inherited should be made final. You might want to relax some access rules (private to protected, final to non-final) for the sake of unit-testing, but then document it, and make it clear that although the method is protected, it&apos;s not supposed to be overridden.</p>
+<h2 id="formatting-sql-statements">Formatting SQL statements</h2>
+<p>When formatting SQL statements you may break it into several lines and indent if it is sufficiently complex. Always capitalize the SQL parts of the statement like <code>UPDATE</code> or <code>WHERE</code>.</p>
+<h2 id="clever-code">Clever Code</h2>
+<p>In general, readability is more important than cleverness or brevity.</p>
+<pre class="language-"><code class="lang-php"><span class="token comment" spellcheck="true">// No:</span>
+<span class="token function">isset</span><span class="token punctuation">(</span> <span class="token variable">$var</span> <span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token variable">$var</span> <span class="token operator">=</span> <span class="token function">some_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Yes:</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span> <span class="token function">isset</span><span class="token punctuation">(</span> <span class="token variable">$var</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token variable">$var</span> <span class="token operator">=</span> <span class="token function">some_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://engineering.hmn.md/how-we-work/style/php/" target="_blank">Human Made - PHP Style Guide</a></li>
+<li><a href="https://10up.github.io/Engineering-Best-Practices/php/" target="_blank">10up Engineering Best Practices - PHP</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../JavaScript/Coding Style.html" class="navigation navigation-prev " aria-label="Previous page: Coding Style">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Dependencies.html" class="navigation navigation-next " aria-label="Next page: Dependencies">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Coding Style","level":"3.1","depth":1,"next":{"title":"Dependencies","level":"3.2","depth":1,"path":"PHP/Dependencies.md","ref":"PHP/Dependencies.md","articles":[]},"previous":{"title":"Coding Style","level":"2.1","depth":1,"path":"JavaScript/Coding Style.md","ref":"JavaScript/Coding Style.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Engenharia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"log's Standards","language":"en","gitbook":">=3.0.0","description":"The coding standards used at log.","direction":"ltr"},"file":{"path":"PHP/Coding Style.md","mtime":"2017-10-04T16:27:48.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-04T16:29:56.931Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
