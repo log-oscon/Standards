@@ -2,6 +2,8 @@
 
 Unless otherwise mentioned, we follow the [WordPress PHP Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) and [PSRs](http://www.php-fig.org/psr/).
 
+Add this [PHPCS ruleset file](https://github.com/log-oscon/Standards/blob/master/PHP/phpcs.ruleset.xml) to your project.
+
 We also have our own standards for things that aren’t covered by the standards mentioned above, such as namespacing and general project structure.
 
 For ease of reference, the most important points of the previous standards are described here as well.
